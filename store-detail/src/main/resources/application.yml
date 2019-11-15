@@ -1,0 +1,11 @@
+spring:
+  application:
+    name: store-detail
+
+server:
+  port: 8020
+
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:8180/eureka/

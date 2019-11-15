@@ -1,0 +1,34 @@
+spring:
+  application:
+    name: store-zuul
+
+server:
+  port: 8080
+
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:8180/eureka/
+
+ribbon:
+  connectTimeout: 2000
+  readTimeout: 5000
+
+zuul:
+  host:
+    connect-timeout-millis: 10000
+    socket-timeout-millis: 60000
+  sensitive-headers:
+  routes:
+    store-main:
+      path: /main/**
+      serviceId: store-main
+    store-detail:
+      path: /detail/**
+      serviceId: store-detail
+    store-order-pay:
+      path: /order/**
+      serviceId: store-order-pay
+    store-shoppingcart:
+      path: /shoppingcart/**
+      serviceId: store-shoppingcart

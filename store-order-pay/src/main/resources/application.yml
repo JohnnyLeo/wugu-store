@@ -1,0 +1,11 @@
+spring:
+  application:
+    name: store-order-pay
+
+server:
+  port: 8030
+
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:8180/eureka/
