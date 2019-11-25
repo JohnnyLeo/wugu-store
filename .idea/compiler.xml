@@ -11,6 +11,7 @@
         <module name="store-order-pay" />
         <module name="store-zuul" />
         <module name="store-eureka" />
+        <module name="store-login-register" />
         <module name="store-shoppingcart" />
         <module name="store-detail" />
       </profile>

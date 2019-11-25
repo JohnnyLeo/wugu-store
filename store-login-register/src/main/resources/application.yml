@@ -1,13 +1,9 @@
 spring:
   application:
-    name: store-session
-  redis:
-    database: 0
-    host: 127.0.0.1
-    port: 6379
+    name: store-login-register
 
 server:
-  port: 8280
+  port: 8050
 
 eureka:
   client:

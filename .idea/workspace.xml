@@ -1,7 +1,34 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="1986aff7-b218-45ed-8c4f-908a07bff74f" name="Default Changelist" comment="" />
+    <list default="true" id="1986aff7-b218-45ed-8c4f-908a07bff74f" name="Default Changelist" comment="add session;login-register">
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/store-detail/src/main/java/com.wugu.store/web/LoginController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/store-detail/target/classes/application.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/store-detail/target/classes/com/wugu/store/DetailApplication.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/store-detail/target/classes/com/wugu/store/web/LoginController.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/store-login-register/pom.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/store-login-register/src/main/java/com/wugu/store/LoginRegisterApplication.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/store-login-register/src/main/java/com/wugu/store/web/LoginController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/store-login-register/src/main/resources/application.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/store-session/src/main/java/com/wugu/store/domain/Session.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/store-session/src/main/java/com/wugu/store/web/RedisController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/store-session/target/classes/application.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/store-session/target/classes/com/wugu/store/SessionApplication.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/store-session/target/classes/com/wugu/store/domain/Session.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/store-session/target/classes/com/wugu/store/web/RedisController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/store-detail/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/store-detail/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/store-detail/src/main/java/com.wugu.store/DetailApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/store-detail/src/main/java/com.wugu.store/DetailApplication.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/store-eureka/target/classes/application.yml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/store-eureka/target/classes/com/wugu/store/EurekaApplication.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/store-session/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/store-session/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/store-session/src/main/java/com.wugu.store/SessionApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/store-session/src/main/java/com/wugu/store/SessionApplication.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/store-session/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/store-session/src/main/resources/application.yml" afterDir="false" />
+    </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -15,10 +42,14 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Tag Library Descriptor" />
-        <option value="Class" />
         <option value="FxmlFile" />
+        <option value="spring-beans.schema" />
+        <option value="Class" />
       </list>
     </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="MavenImportPreferences">
     <option name="generalSettings">
@@ -31,6 +62,9 @@
     <option name="version" value="1" />
   </component>
   <component name="ProjectId" id="1TbtmcQjDW13jHsLTbax2uBA7H1" />
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="PropertiesComponent">
     <property name="ExpandSpringBootJavaOptionsPanel" value="true" />
     <property name="RequestMappingsPanelOrder0" value="0" />
@@ -39,6 +73,7 @@
     <property name="RequestMappingsPanelWidth0" value="75" />
     <property name="RequestMappingsPanelWidth1" value="75" />
     <property name="RequestMappingsPanelWidth2" value="75" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/store-shoppingcart/src/main/java/com.wugu.store" />
@@ -51,8 +86,11 @@
   </component>
   <component name="RecentsManager">
     <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
-      <recent name="com.wugu.store.web" />
       <recent name="com.wugu.store" />
+      <recent name="com.wugu.store.web" />
+    </key>
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="com.wugu.store.web" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="D:\IDEA\java web\wugustore\store-shoppingcart\src\main\java\com.wugu.store" />
@@ -72,7 +110,15 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Spring Boot.Zuul">
+  <component name="RunManager" selected="Spring Boot.Session">
+    <configuration name="Detail" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+      <module name="store-detail" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.wugu.store.DetailApplication" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="Eureka" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
       <module name="store-eureka" />
       <option name="SPRING_BOOT_MAIN_CLASS" value="com.wugu.store.EurekaApplication" />
@@ -85,6 +131,14 @@
     <configuration name="Main" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
       <module name="store-main" />
       <option name="SPRING_BOOT_MAIN_CLASS" value="com.wugu.store.MainApplication" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Session" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+      <module name="store-session" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.wugu.store.SessionApplication" />
       <option name="ALTERNATIVE_JRE_PATH" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -161,6 +215,8 @@
       </method>
     </configuration>
     <list>
+      <item itemvalue="Spring Boot.Detail" />
+      <item itemvalue="Spring Boot.Session" />
       <item itemvalue="Spring Boot.Zuul" />
       <item itemvalue="Spring Boot.Main" />
       <item itemvalue="Spring Boot.Eureka" />
@@ -181,10 +237,32 @@
       <workItem from="1573795757099" duration="3335000" />
       <workItem from="1573799431384" duration="2783000" />
       <workItem from="1573804282278" duration="9477000" />
+      <workItem from="1574407587976" duration="1851000" />
+      <workItem from="1574416388407" duration="4348000" />
+      <workItem from="1574596140946" duration="11938000" />
+      <workItem from="1574661732932" duration="2348000" />
+      <workItem from="1574669115272" duration="1665000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State>
+              <option name="COLUMN_ORDER" />
+            </State>
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="add session;login-register" />
+    <option name="LAST_COMMIT_MESSAGE" value="add session;login-register" />
   </component>
 </project>

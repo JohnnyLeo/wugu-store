@@ -15,6 +15,7 @@
         <module>store-order-pay</module>
         <module>store-session</module>
         <module>store-shoppingcart</module>
+        <module>store-login-register</module>
     </modules>
     <packaging>pom</packaging>
 
@@ -53,6 +54,12 @@
                 <groupId>log4j</groupId>
                 <artifactId>log4j</artifactId>
                 <version>${log4j.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>com.alibaba</groupId>
+                <artifactId>fastjson</artifactId>
+                <version>1.2.59</version>
             </dependency>
         </dependencies>
     </dependencyManagement>
