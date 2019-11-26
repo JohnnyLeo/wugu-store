@@ -6,16 +6,14 @@ import com.alibaba.fastjson.serializer.SerializerFeature;
 import com.wugu.store.domain.Session;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.redis.core.StringRedisTemplate;
-import org.springframework.web.bind.annotation.RequestAttribute;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestMethod;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import javax.servlet.http.HttpServletRequest;
 import java.lang.reflect.Method;
 import java.util.concurrent.TimeUnit;
 
 @RestController
+@RequestMapping(value = "/session")
 public class RedisController {
 
     private StringRedisTemplate stringRedisTemplate;
@@ -33,8 +31,7 @@ public class RedisController {
     }
 
     @RequestMapping(value = "/selectSession")
-    public boolean selectSession(String sessionID) {
-        System.out.print("0");
+    public boolean selectSession(@RequestBody String sessionID) {
         return stringRedisTemplate.hasKey(sessionID);
     }
 
