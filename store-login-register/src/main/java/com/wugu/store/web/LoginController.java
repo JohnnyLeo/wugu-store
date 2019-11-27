@@ -7,7 +7,9 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.client.RestTemplate;
 
+import javax.servlet.http.Cookie;
 import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
 
 @RestController
 @RequestMapping(value = "/login")
@@ -32,17 +34,25 @@ public class LoginController {
     }
 
     @RequestMapping(value = "/doLogin")
-    public boolean doLogin(HttpServletRequest request) {
+    public boolean doLogin(HttpServletRequest request, HttpServletResponse response) {
         String userName = request.getParameter("userName");
         String passWord = request.getParameter("passWord");
         // {查数据库}
         if (loginService.doLogin(userName, passWord)) {
             // {存redis}
             String sessionID = request.getSession().getId();
-            restTemplate.getForObject("http://localhost:8280/session/createSession", void.class, sessionID);
+            restTemplate.put("http://localhost:8280/session/createSession", sessionID);
+            Cookie cookie = new Cookie("sessionID", sessionID);
+            cookie.setMaxAge(60 * 60);
+            response.addCookie(cookie);
             return true;
         } else {
             return false;
         }
+    }
+
+    @RequestMapping(value = "/loginOut")
+    public void loginOut(@RequestBody String sessionID) {
+        restTemplate.delete("http://localhost:8280/session/removeSession", sessionID);
     }
 }
