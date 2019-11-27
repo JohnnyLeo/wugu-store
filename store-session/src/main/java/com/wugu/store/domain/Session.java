@@ -21,4 +21,8 @@ public class Session {
     public String getAttribute(String key) {
         return hashMap.get(key);
     }
+
+    public void removeAttribute(String key) {
+        hashMap.remove(key);
+    }
 }

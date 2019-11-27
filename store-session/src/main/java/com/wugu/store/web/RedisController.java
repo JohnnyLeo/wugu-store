@@ -24,7 +24,7 @@ public class RedisController {
     }
 
     @RequestMapping(value = "/createSession")
-    public void createSession(String sessionID) {
+    public void createSession(@RequestBody String sessionID) {
         Session session = new Session();
         String sessionInfo = JSON.toJSONString(session, SerializerFeature.WriteMapNullValue);
         stringRedisTemplate.opsForValue().set(sessionID, sessionInfo, 30, TimeUnit.MINUTES);
@@ -35,8 +35,17 @@ public class RedisController {
         return stringRedisTemplate.hasKey(sessionID);
     }
 
+    /**
+     *
+     * @param jsonRequest sessionID:String key:String value:String
+     * @return true or false
+     */
     @RequestMapping(value = "/setAttribute")
-    public boolean setAttribute(String sessionID, String key, String value) {
+    public boolean setAttribute(@RequestBody String jsonRequest) {
+        JSONObject jsonObject = JSON.parseObject(jsonRequest);
+        String sessionID = jsonObject.get("sessionID").toString();
+        String key = jsonObject.get("key").toString();
+        String value = jsonObject.get("value").toString();
         if (selectSession(sessionID)) {
             Session session = getSession(sessionID);
             session.setAttribute(key, value);
@@ -48,8 +57,16 @@ public class RedisController {
         }
     }
 
+    /**
+     *
+     * @param jsonRequest sessionID:String key:String
+     * @return value:String or null
+     */
     @RequestMapping(value = "/getAttribute")
-    public String getAttribute(String sessionID, String key) {
+    public String getAttribute(@RequestBody String jsonRequest) {
+        JSONObject jsonObject = JSON.parseObject(jsonRequest);
+        String sessionID = jsonObject.get("sessionID").toString();
+        String key = jsonObject.get("key").toString();
         if (selectSession(sessionID)) {
             Session session  = getSession(sessionID);
             return session.getAttribute(key);
@@ -58,8 +75,25 @@ public class RedisController {
         }
     }
 
+    /**
+     *
+     * @param jsonRequest sessionID:String key:String
+     */
     @RequestMapping(value = "/removeAttribute")
-    public void removeAttribute(String sessionID) {
+    public void removeAttribute(@RequestBody String jsonRequest) {
+        JSONObject jsonObject = JSON.parseObject(jsonRequest);
+        String sessionID = jsonObject.get("sessionID").toString();
+        String key = jsonObject.get("key").toString();
+        if (selectSession(sessionID)) {
+            Session session  = getSession(sessionID);
+            session.removeAttribute(key);
+            String sessionInfo = JSON.toJSONString(session, SerializerFeature.WriteMapNullValue);
+            stringRedisTemplate.opsForValue().set(sessionID, sessionInfo, 30, TimeUnit.MINUTES);
+        }
+    }
+
+    @RequestMapping(value = "/removeAllAttribute")
+    public void removeAllAttribute(@RequestBody String sessionID) {
         if (selectSession(sessionID)) {
             Session session = new Session();
             String sessionInfo = JSON.toJSONString(session, SerializerFeature.WriteMapNullValue);
@@ -68,7 +102,7 @@ public class RedisController {
     }
 
     @RequestMapping(value = "/removeSession")
-    public void removeSession(String sessionID) {
+    public void removeSession(@RequestBody String sessionID) {
         if (selectSession(sessionID)) {
             stringRedisTemplate.delete(sessionID);
         }
