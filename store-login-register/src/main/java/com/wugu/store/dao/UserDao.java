@@ -29,9 +29,9 @@ public class UserDao {
     @Transactional
     public boolean insertUser(String userName, String passWord) {
         User user = new User();
-        user.setUuid(UUID.randomUUID());
+        user.setUserID(UUID.randomUUID());
         user.setUserName(userName);
         user.setPassWord(passWord);
-        return jdbcTemplate.update(insertUserSql, new Object[]{user.getUuid(), user.getUserName(), user.getPassWord()}) == 1;
+        return jdbcTemplate.update(insertUserSql, new Object[]{user.getUserID(), user.getUserName(), user.getPassWord()}) == 1;
     }
 }

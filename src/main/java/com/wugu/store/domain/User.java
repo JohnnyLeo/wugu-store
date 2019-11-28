@@ -1,20 +1,18 @@
 package com.wugu.store.domain;
 
-import org.springframework.context.annotation.Bean;
-
 import java.util.UUID;
 
 public class User {
-    private UUID uuid;
+    private UUID userID;
     private String userName;
     private String passWord;
 
-    public UUID getUuid() {
-        return uuid;
+    public UUID getUserID() {
+        return userID;
     }
 
-    public void setUuid(UUID uuid) {
-        this.uuid = uuid;
+    public void setUserID(UUID userID) {
+        this.userID = userID;
     }
 
     public String getUserName() {
