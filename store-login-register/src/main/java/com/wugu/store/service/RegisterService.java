@@ -18,4 +18,8 @@ public class RegisterService {
     public boolean doRegister(String userName, String passWord) {
         return userDao.insertUser(userName, passWord);
     }
+
+    public boolean userNameVerify(String userName) {
+        return userDao.selectUserName(userName);
+    }
 }

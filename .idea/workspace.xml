@@ -1,13 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="1986aff7-b218-45ed-8c4f-908a07bff74f" name="Default Changelist" comment="add api-bean:User, Phone, Message">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/wugu/store/domain/Message.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/wugu/store/domain/Phone.java" afterDir="false" />
+    <list default="true" id="1986aff7-b218-45ed-8c4f-908a07bff74f" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/store-shoppingcart/src/main/java/com.wugu.store/dao/CartDao.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/store-shoppingcart/src/main/java/com.wugu.store/service/CartService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/store-shoppingcart/src/main/java/com.wugu.store/web/CartController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/store-login-register/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/store-login-register/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/store-login-register/src/main/java/com/wugu/store/dao/UserDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/store-login-register/src/main/java/com/wugu/store/dao/UserDao.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/store-login-register/src/main/java/com/wugu/store/domain/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/wugu/store/domain/User.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/store-login-register/src/main/java/com/wugu/store/service/RegisterService.java" beforeDir="false" afterPath="$PROJECT_DIR$/store-login-register/src/main/java/com/wugu/store/service/RegisterService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/store-login-register/src/main/java/com/wugu/store/web/RegisterController.java" beforeDir="false" afterPath="$PROJECT_DIR$/store-login-register/src/main/java/com/wugu/store/web/RegisterController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/store-main/src/main/java/com.wugu.store/web/LoginController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/store-shoppingcart/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/store-shoppingcart/pom.xml" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -90,6 +93,7 @@
     <property name="project.structure.side.proportion" value="0.28045976" />
     <property name="restartRequiresConfirmation" value="false" />
     <property name="settings.editor.selected.configurable" value="SQL Dialects" />
+    <property name="show.run.dashboard.notification" value="false" />
   </component>
   <component name="RecentsManager">
     <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
@@ -285,7 +289,8 @@
       <workItem from="1574858411909" duration="5314000" />
       <workItem from="1574911890930" duration="934000" />
       <workItem from="1574924425540" duration="3565000" />
-      <workItem from="1574935670654" duration="2518000" />
+      <workItem from="1574935670654" duration="4200000" />
+      <workItem from="1574950672128" duration="5262000" />
     </task>
     <task id="LOCAL-00001" summary="add session;login-register">
       <created>1574670885658</created>
@@ -322,7 +327,14 @@
       <option name="project" value="LOCAL" />
       <updated>1574865694222</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="add api-bean:User, Phone, Message">
+      <created>1574940357693</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1574940357693</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
