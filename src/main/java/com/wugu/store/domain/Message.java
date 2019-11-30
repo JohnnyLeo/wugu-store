@@ -1,26 +1,24 @@
 package com.wugu.store.domain;
 
-import java.util.UUID;
-
 public class Message {
-    private UUID userID;
-    private UUID phoneID;
+    private String userName;
+    private String phoneName;
     private int state;
 
-    public UUID getUserID() {
-        return userID;
+    public String getUserName() {
+        return userName;
     }
 
-    public void setUserID(UUID userID) {
-        this.userID = userID;
+    public void setUserName(String userName) {
+        this.userName = userName;
     }
 
-    public UUID getPhoneID() {
-        return phoneID;
+    public String getPhoneName() {
+        return phoneName;
     }
 
-    public void setPhoneID(UUID phoneID) {
-        this.phoneID = phoneID;
+    public void setPhoneName(String phoneName) {
+        this.phoneName = phoneName;
     }
 
     public int getState() {

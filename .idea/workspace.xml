@@ -1,16 +1,25 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="1986aff7-b218-45ed-8c4f-908a07bff74f" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/store-shoppingcart/src/main/java/com.wugu.store/dao/CartDao.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/store-shoppingcart/src/main/java/com.wugu.store/service/CartService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/store-shoppingcart/src/main/java/com.wugu.store/web/CartController.java" afterDir="false" />
+    <list default="true" id="1986aff7-b218-45ed-8c4f-908a07bff74f" name="Default Changelist" comment="change (User, Phone, Message).primaryKey; change redis.session from Session:JsonString to redis.Hash:String">
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/wugu/store/domain/WuguAttribute.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/wugu/store/domain/WuguSession.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/wugu/store/domain/Message.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/wugu/store/domain/Message.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/wugu/store/domain/Phone.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/wugu/store/domain/Phone.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/wugu/store/domain/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/wugu/store/domain/User.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/store-detail/target/classes/com/wugu/store/web/LoginController.class" beforeDir="false" afterPath="$PROJECT_DIR$/store-detail/target/classes/com/wugu/store/web/LoginController.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/store-login-register/src/main/java/com/wugu/store/dao/UserDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/store-login-register/src/main/java/com/wugu/store/dao/UserDao.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/store-login-register/src/main/java/com/wugu/store/service/RegisterService.java" beforeDir="false" afterPath="$PROJECT_DIR$/store-login-register/src/main/java/com/wugu/store/service/RegisterService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/store-login-register/src/main/java/com/wugu/store/web/RegisterController.java" beforeDir="false" afterPath="$PROJECT_DIR$/store-login-register/src/main/java/com/wugu/store/web/RegisterController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/store-main/src/main/java/com.wugu.store/web/LoginController.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/store-shoppingcart/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/store-shoppingcart/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/store-login-register/src/main/java/com/wugu/store/web/LoginController.java" beforeDir="false" afterPath="$PROJECT_DIR$/store-login-register/src/main/java/com/wugu/store/web/LoginController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/store-main/target/classes/META-INF/store-main.kotlin_module" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/store-main/target/classes/com/wugu/store/web/LoginController.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/store-session/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/store-session/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/store-session/src/main/java/com/wugu/store/domain/Session.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/store-session/src/main/java/com/wugu/store/web/RedisController.java" beforeDir="false" afterPath="$PROJECT_DIR$/store-session/src/main/java/com/wugu/store/web/RedisController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/store-session/target/classes/com/wugu/store/SessionApplication.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/store-session/target/classes/com/wugu/store/domain/Session.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/store-session/target/classes/com/wugu/store/web/RedisController.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/store-zuul/target/classes/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/store-zuul/target/classes/application.yml" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -290,7 +299,8 @@
       <workItem from="1574911890930" duration="934000" />
       <workItem from="1574924425540" duration="3565000" />
       <workItem from="1574935670654" duration="4200000" />
-      <workItem from="1574950672128" duration="5262000" />
+      <workItem from="1574950672128" duration="5349000" />
+      <workItem from="1575096572176" duration="6615000" />
     </task>
     <task id="LOCAL-00001" summary="add session;login-register">
       <created>1574670885658</created>
@@ -334,7 +344,14 @@
       <option name="project" value="LOCAL" />
       <updated>1574940357693</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="add /userNameVerify(userName need to be unique)">
+      <created>1574956055295</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1574956055295</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -360,6 +377,8 @@
     <MESSAGE value="add /loginOut" />
     <MESSAGE value="change multiple parameters to a String jsonRequest; change /removeAttribute; add /removeAllAttribute" />
     <MESSAGE value="add api-bean:User, Phone, Message" />
-    <option name="LAST_COMMIT_MESSAGE" value="add api-bean:User, Phone, Message" />
+    <MESSAGE value="add /userNameVerify(userName need to be unique)" />
+    <MESSAGE value="change (User, Phone, Message).primaryKey; change redis.session from Session:JsonString to redis.Hash:String" />
+    <option name="LAST_COMMIT_MESSAGE" value="change (User, Phone, Message).primaryKey; change redis.session from Session:JsonString to redis.Hash:String" />
   </component>
 </project>

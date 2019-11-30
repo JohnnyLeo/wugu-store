@@ -1,5 +1,6 @@
 package com.wugu.store.web;
 
+import com.wugu.store.domain.WuguSession;
 import com.wugu.store.service.LoginService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.RequestBody;
@@ -41,7 +42,10 @@ public class LoginController {
         if (loginService.doLogin(userName, passWord)) {
             // {存redis}
             String sessionID = request.getSession().getId();
-            restTemplate.put("http://localhost:8280/session/createSession", sessionID);
+            WuguSession wuguSession = new WuguSession();
+            wuguSession.setSessionID(sessionID);
+            wuguSession.setUserName(userName);
+            restTemplate.put("http://localhost:8280/session/createSession", wuguSession);
             Cookie cookie = new Cookie("sessionID", sessionID);
             cookie.setMaxAge(60 * 60);
             response.addCookie(cookie);

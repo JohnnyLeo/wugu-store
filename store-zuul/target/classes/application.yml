@@ -19,8 +19,16 @@ zuul:
     connect-timeout-millis: 10000
     socket-timeout-millis: 60000
   sensitive-headers:
-
   routes:
-    api-wallet:
-      path: /api/**
+    store-main:
+      path: /main/**
       serviceId: store-main
+    store-detail:
+      path: /detail/**
+      serviceId: store-detail
+    store-order-pay:
+      path: /order/**
+      serviceId: store-order-pay
+    store-shoppingcart:
+      path: /shoppingcart/**
+      serviceId: store-shoppingcart

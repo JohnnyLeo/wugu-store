@@ -13,7 +13,7 @@ public class UserDao {
 
     private final static String selectUserNameSql = "select * from user where username = ?";
     private final static String selectUserSql = "select * from user where username = ? and password = ?";
-    private final static String insertUserSql = "insert into user values(?, ?, ?)";
+    private final static String insertUserSql = "insert into user values(?, ?)";
 
     private JdbcTemplate jdbcTemplate;
 
@@ -40,9 +40,8 @@ public class UserDao {
     @Transactional
     public boolean insertUser(String userName, String passWord) {
         User user = new User();
-        user.setUserID(UUID.randomUUID());
         user.setUserName(userName);
         user.setPassWord(passWord);
-        return jdbcTemplate.update(insertUserSql, new Object[]{user.getUserID(), user.getUserName(), user.getPassWord()}) == 1;
+        return jdbcTemplate.update(insertUserSql, new Object[]{user.getUserName(), user.getPassWord()}) == 1;
     }
 }

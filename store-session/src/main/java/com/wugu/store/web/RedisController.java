@@ -1,56 +1,56 @@
 package com.wugu.store.web;
 
-import com.alibaba.fastjson.JSON;
-import com.alibaba.fastjson.JSONObject;
-import com.alibaba.fastjson.serializer.SerializerFeature;
-import com.wugu.store.domain.Session;
+import com.wugu.store.domain.WuguAttribute;
+import com.wugu.store.domain.WuguSession;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.data.redis.core.StringRedisTemplate;
+import org.springframework.data.redis.core.RedisTemplate;
 import org.springframework.web.bind.annotation.*;
-
-import javax.servlet.http.HttpServletRequest;
-import java.lang.reflect.Method;
 import java.util.concurrent.TimeUnit;
 
 @RestController
 @RequestMapping(value = "/session")
 public class RedisController {
 
-    private StringRedisTemplate stringRedisTemplate;
+    private final static String SESSION_ATTRIBUTE_USER_KEY = "userName";
+    private final static int SESSION_TIME_OUT = 30;
+
+    private RedisTemplate redisTemplate;
 
     @Autowired
-    public void setStringRedisTemplate(StringRedisTemplate stringRedisTemplate) {
-        this.stringRedisTemplate = stringRedisTemplate;
+    public void setRedisTemplate(RedisTemplate redisTemplate) {
+        this.redisTemplate = redisTemplate;
     }
 
     @RequestMapping(value = "/createSession")
-    public void createSession(@RequestBody String sessionID) {
-        Session session = new Session();
-        String sessionInfo = JSON.toJSONString(session, SerializerFeature.WriteMapNullValue);
-        stringRedisTemplate.opsForValue().set(sessionID, sessionInfo, 30, TimeUnit.MINUTES);
+    public boolean createSession(@RequestBody WuguSession session) {
+        if (session.getSessionID() != null && session.getUserName() != null) {
+            redisTemplate.opsForValue().set(session.getSessionID(), null);
+            redisTemplate.boundHashOps(session.getSessionID()).put(SESSION_ATTRIBUTE_USER_KEY, session.getUserName());
+            redisTemplate.expire(session, SESSION_TIME_OUT, TimeUnit.MINUTES);
+            return true;
+        } else {
+            return false;
+        }
     }
 
     @RequestMapping(value = "/selectSession")
     public boolean selectSession(@RequestBody String sessionID) {
-        return stringRedisTemplate.hasKey(sessionID);
+        return redisTemplate.hasKey(sessionID);
     }
 
     /**
      *
-     * @param jsonRequest sessionID:String key:String value:String
+     * @param attribute sessionID:String key:String value:String
      * @return true or false
      */
     @RequestMapping(value = "/setAttribute")
-    public boolean setAttribute(@RequestBody String jsonRequest) {
-        JSONObject jsonObject = JSON.parseObject(jsonRequest);
-        String sessionID = jsonObject.get("sessionID").toString();
-        String key = jsonObject.get("key").toString();
-        String value = jsonObject.get("value").toString();
-        if (selectSession(sessionID)) {
-            Session session = getSession(sessionID);
-            session.setAttribute(key, value);
-            String sessionInfo = JSON.toJSONString(session, SerializerFeature.WriteMapNullValue);
-            stringRedisTemplate.opsForValue().set(sessionID, sessionInfo, 30, TimeUnit.MINUTES);
+    public boolean setAttribute(@RequestBody WuguAttribute attribute) {
+        String sessionID = attribute.getSessionID();
+        String key = attribute.getKey();
+        String value = attribute.getValue();
+        if (key != null && selectSession(sessionID)) {
+            redisTemplate.boundHashOps(sessionID).put(key, value);
+            redisTemplate.expire(sessionID, SESSION_TIME_OUT, TimeUnit.MINUTES);
             return true;
         } else {
             return false;
@@ -59,17 +59,17 @@ public class RedisController {
 
     /**
      *
-     * @param jsonRequest sessionID:String key:String
+     * @param attribute sessionID:String key:String value:null
      * @return value:String or null
      */
     @RequestMapping(value = "/getAttribute")
-    public String getAttribute(@RequestBody String jsonRequest) {
-        JSONObject jsonObject = JSON.parseObject(jsonRequest);
-        String sessionID = jsonObject.get("sessionID").toString();
-        String key = jsonObject.get("key").toString();
+    public String getAttribute(@RequestBody WuguAttribute attribute) {
+        String sessionID = attribute.getSessionID();
+        String key = attribute.getKey();
         if (selectSession(sessionID)) {
-            Session session  = getSession(sessionID);
-            return session.getAttribute(key);
+            String value = redisTemplate.boundHashOps(sessionID).get(key).toString();
+            redisTemplate.expire(sessionID, SESSION_TIME_OUT, TimeUnit.MINUTES);
+            return value;
         } else {
             return null;
         }
@@ -77,39 +77,22 @@ public class RedisController {
 
     /**
      *
-     * @param jsonRequest sessionID:String key:String
+     * @param attribute sessionID:String key:String value:null
      */
     @RequestMapping(value = "/removeAttribute")
-    public void removeAttribute(@RequestBody String jsonRequest) {
-        JSONObject jsonObject = JSON.parseObject(jsonRequest);
-        String sessionID = jsonObject.get("sessionID").toString();
-        String key = jsonObject.get("key").toString();
+    public void removeAttribute(@RequestBody WuguAttribute attribute) {
+        String sessionID = attribute.getSessionID();
+        String key = attribute.getKey();
         if (selectSession(sessionID)) {
-            Session session  = getSession(sessionID);
-            session.removeAttribute(key);
-            String sessionInfo = JSON.toJSONString(session, SerializerFeature.WriteMapNullValue);
-            stringRedisTemplate.opsForValue().set(sessionID, sessionInfo, 30, TimeUnit.MINUTES);
-        }
-    }
-
-    @RequestMapping(value = "/removeAllAttribute")
-    public void removeAllAttribute(@RequestBody String sessionID) {
-        if (selectSession(sessionID)) {
-            Session session = new Session();
-            String sessionInfo = JSON.toJSONString(session, SerializerFeature.WriteMapNullValue);
-            stringRedisTemplate.opsForValue().set(sessionID, sessionInfo, 30, TimeUnit.MINUTES);
+            redisTemplate.boundHashOps(sessionID).delete(key);
+            redisTemplate.expire(sessionID, SESSION_TIME_OUT, TimeUnit.MINUTES);
         }
     }
 
     @RequestMapping(value = "/removeSession")
     public void removeSession(@RequestBody String sessionID) {
         if (selectSession(sessionID)) {
-            stringRedisTemplate.delete(sessionID);
+            redisTemplate.delete(sessionID);
         }
-    }
-
-    private Session getSession(String sessionID) {
-        String sessionInfo = stringRedisTemplate.opsForValue().get(sessionID);
-        return JSONObject.parseObject(sessionInfo, com.wugu.store.domain.Session.class);
     }
 }

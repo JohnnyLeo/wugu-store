@@ -3,19 +3,10 @@ package com.wugu.store.domain;
 import java.util.UUID;
 
 public class Phone {
-    private UUID phoneID;
     private String phoneName;
     private String phonePrice;
     private int phoneQuantity;
     private String phoneDescription;
-
-    public UUID getPhoneID() {
-        return phoneID;
-    }
-
-    public void setPhoneID(UUID phoneID) {
-        this.phoneID = phoneID;
-    }
 
     public String getPhoneName() {
         return phoneName;
