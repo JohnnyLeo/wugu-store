@@ -6,8 +6,6 @@ import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.stereotype.Repository;
 import org.springframework.transaction.annotation.Transactional;
 
-import java.util.UUID;
-
 @Repository
 public class UserDao {
 
@@ -42,6 +40,6 @@ public class UserDao {
         User user = new User();
         user.setUserName(userName);
         user.setPassWord(passWord);
-        return jdbcTemplate.update(insertUserSql, new Object[]{user.getUserName(), user.getPassWord()}) == 1;
+        return jdbcTemplate.update(insertUserSql, user.getUserName(), user.getPassWord()) == 1;
     }
 }

@@ -1,5 +1,6 @@
 package com.wugu.store.web;
 
+import com.wugu.store.domain.WuguAttribute;
 import com.wugu.store.domain.WuguSession;
 import com.wugu.store.service.LoginService;
 import org.springframework.beans.factory.annotation.Autowired;
