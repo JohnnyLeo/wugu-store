@@ -1,6 +1,6 @@
 spring:
   application:
-    name: store-shoppingcart
+    name: store-shoppingCart
 
 server:
   port: 8040

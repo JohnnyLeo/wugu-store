@@ -26,7 +26,7 @@ public class CartController {
     @RequestMapping(value = "/add")
     public boolean add(HttpServletRequest request, HttpServletResponse response){
         Cookie[] cookies = request.getCookies();
-        if (cartService.add(cookies, request.getParameter("phoneName"))) {
+        if (cartService.add(cookies, request.getParameter("phoneName"), request.getParameter("number"))) {
             return true;
         } else {
             try {

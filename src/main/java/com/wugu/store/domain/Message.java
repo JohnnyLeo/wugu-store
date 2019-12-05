@@ -4,6 +4,27 @@ import java.util.UUID;
 
 public class Message {
     private UUID messageID;
+    private String userName;
+    private String phoneName;
+    private Integer price;
+    private Integer number;
+    private Integer state;
+
+    public int getPrice() {
+        return price;
+    }
+
+    public void setPrice(int price) {
+        this.price = price;
+    }
+
+    public int getNumber() {
+        return number;
+    }
+
+    public void setNumber(int number) {
+        this.number = number;
+    }
 
     public UUID getMessageID() {
         return messageID;
@@ -12,10 +33,6 @@ public class Message {
     public void setMessageID(UUID messageID) {
         this.messageID = messageID;
     }
-
-    private String userName;
-    private String phoneName;
-    private int state;
 
     public String getUserName() {
         return userName;

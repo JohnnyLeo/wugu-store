@@ -1,17 +1,26 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="1986aff7-b218-45ed-8c4f-908a07bff74f" name="Default Changelist" comment="add /cart/add; add message.UUID">
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources.xml" beforeDir="false" />
+    <list default="true" id="1986aff7-b218-45ed-8c4f-908a07bff74f" name="Default Changelist" comment="add filter of login; add filter of some url; change Message's property; add PhoneDao;">
+      <change afterPath="$PROJECT_DIR$/store-shoppingCart/src/main/java/com.wugu.store/dao/PhoneDao.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/store-zuul/src/main/java/com/wugu/store/filter/LoginFilter.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/store-zuul/src/main/java/com/wugu/store/filter/UrlFilter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/wugu/store/domain/Message.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/wugu/store/domain/Message.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/store-login-register/src/main/java/com/wugu/store/dao/UserDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/store-login-register/src/main/java/com/wugu/store/dao/UserDao.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/wugu/store/domain/Phone.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/wugu/store/domain/Phone.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/store-login-register/src/main/java/com/wugu/store/web/LoginController.java" beforeDir="false" afterPath="$PROJECT_DIR$/store-login-register/src/main/java/com/wugu/store/web/LoginController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/store-shoppingcart/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/store-shoppingcart/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/store-shoppingcart/src/main/java/com.wugu.store/ShoppingCartApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/store-shoppingcart/src/main/java/com.wugu.store/ShoppingCartApplication.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/store-shoppingcart/src/main/java/com.wugu.store/dao/CartDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/store-shoppingcart/src/main/java/com.wugu.store/dao/CartDao.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/store-shoppingcart/src/main/java/com.wugu.store/service/CartService.java" beforeDir="false" afterPath="$PROJECT_DIR$/store-shoppingcart/src/main/java/com.wugu.store/service/CartService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/store-shoppingcart/src/main/java/com.wugu.store/web/CartController.java" beforeDir="false" afterPath="$PROJECT_DIR$/store-shoppingcart/src/main/java/com.wugu.store/web/CartController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/store-shoppingcart/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/store-shoppingCart/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/store-shoppingcart/src/main/java/com.wugu.store/ShoppingCartApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/store-shoppingCart/src/main/java/com.wugu.store/ShoppingCartApplication.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/store-shoppingcart/src/main/java/com.wugu.store/dao/CartDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/store-shoppingCart/src/main/java/com.wugu.store/dao/CartDao.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/store-shoppingcart/src/main/java/com.wugu.store/service/CartService.java" beforeDir="false" afterPath="$PROJECT_DIR$/store-shoppingCart/src/main/java/com.wugu.store/service/CartService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/store-shoppingcart/src/main/java/com.wugu.store/web/CartController.java" beforeDir="false" afterPath="$PROJECT_DIR$/store-shoppingCart/src/main/java/com.wugu.store/web/CartController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/store-shoppingcart/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/store-shoppingCart/src/main/resources/application.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/store-shoppingcart/store-shoppingcart.iml" beforeDir="false" afterPath="$PROJECT_DIR$/store-shoppingCart/store-shoppingCart.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/store-zuul/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/store-zuul/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/store-zuul/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/store-zuul/src/main/resources/application.yml" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -37,6 +46,38 @@
       <path>
         <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
         <item name="wugustore@localhost" type="feb32156:DbDataSourceImpl" />
+      </path>
+      <path>
+        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
+        <item name="wugustore@localhost" type="feb32156:DbDataSourceImpl" />
+        <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
+      </path>
+      <path>
+        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
+        <item name="wugustore@localhost" type="feb32156:DbDataSourceImpl" />
+        <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
+        <item name="wugustore: schema" type="76f4a085:MysqlImplModel$Schema" />
+      </path>
+      <path>
+        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
+        <item name="wugustore@localhost" type="feb32156:DbDataSourceImpl" />
+        <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
+        <item name="wugustore: schema" type="76f4a085:MysqlImplModel$Schema" />
+        <item name="message: table" type="285a2a93:MysqlImplModel$Table" />
+      </path>
+      <path>
+        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
+        <item name="wugustore@localhost" type="feb32156:DbDataSourceImpl" />
+        <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
+        <item name="wugustore: schema" type="76f4a085:MysqlImplModel$Schema" />
+        <item name="phone: table" type="285a2a93:MysqlImplModel$Table" />
+      </path>
+      <path>
+        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
+        <item name="wugustore@localhost" type="feb32156:DbDataSourceImpl" />
+        <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
+        <item name="wugustore: schema" type="76f4a085:MysqlImplModel$Schema" />
+        <item name="user: table" type="285a2a93:MysqlImplModel$Table" />
       </path>
     </expand>
     <select />
@@ -298,7 +339,8 @@
       <workItem from="1574935670654" duration="4200000" />
       <workItem from="1574950672128" duration="5349000" />
       <workItem from="1575096572176" duration="8727000" />
-      <workItem from="1575448220839" duration="2957000" />
+      <workItem from="1575448220839" duration="3051000" />
+      <workItem from="1575517354588" duration="9861000" />
     </task>
     <task id="LOCAL-00001" summary="add session;login-register">
       <created>1574670885658</created>
@@ -356,7 +398,14 @@
       <option name="project" value="LOCAL" />
       <updated>1575103236526</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="add /cart/add; add message.UUID">
+      <created>1575455309706</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1575455309706</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -385,6 +434,8 @@
     <MESSAGE value="add /userNameVerify(userName need to be unique)" />
     <MESSAGE value="change (User, Phone, Message).primaryKey; change redis.session from Session:JsonString to redis.Hash:String" />
     <MESSAGE value="add /cart/add; add message.UUID" />
-    <option name="LAST_COMMIT_MESSAGE" value="add /cart/add; add message.UUID" />
+    <MESSAGE value="add filter of login; add filter of some url; change Message's property" />
+    <MESSAGE value="add filter of login; add filter of some url; change Message's property; add PhoneDao;" />
+    <option name="LAST_COMMIT_MESSAGE" value="add filter of login; add filter of some url; change Message's property; add PhoneDao;" />
   </component>
 </project>

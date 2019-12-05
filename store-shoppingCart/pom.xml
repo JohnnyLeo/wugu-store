@@ -9,7 +9,7 @@
     </parent>
     <modelVersion>4.0.0</modelVersion>
 
-    <artifactId>store-shoppingcart</artifactId>
+    <artifactId>store-shoppingCart</artifactId>
 
     <dependencies>
         <dependency>

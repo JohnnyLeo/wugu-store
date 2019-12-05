@@ -12,6 +12,7 @@ import org.springframework.web.client.RestTemplate;
 import javax.servlet.http.Cookie;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import java.util.UUID;
 
 @RestController
 @RequestMapping(value = "/login")
@@ -42,7 +43,7 @@ public class LoginController {
         // {查数据库}
         if (loginService.doLogin(userName, passWord)) {
             // {存redis}
-            String sessionID = request.getSession().getId();
+            String sessionID = UUID.randomUUID().toString();
             WuguSession wuguSession = new WuguSession();
             wuguSession.setSessionID(sessionID);
             wuguSession.setUserName(userName);

@@ -4,8 +4,8 @@ import java.util.UUID;
 
 public class Phone {
     private String phoneName;
-    private String phonePrice;
-    private int phoneQuantity;
+    private Integer phonePrice;
+    private Integer phoneQuantity;
     private String phoneDescription;
 
     public String getPhoneName() {
@@ -16,11 +16,11 @@ public class Phone {
         this.phoneName = phoneName;
     }
 
-    public String getPhonePrice() {
+    public Integer getPhonePrice() {
         return phonePrice;
     }
 
-    public void setPhonePrice(String phonePrice) {
+    public void setPhonePrice(Integer phonePrice) {
         this.phonePrice = phonePrice;
     }
 

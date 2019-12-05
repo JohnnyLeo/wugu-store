@@ -30,5 +30,8 @@ zuul:
       path: /order/**
       serviceId: store-order-pay
     store-shoppingcart:
-      path: /shoppingcart/**
-      serviceId: store-shoppingcart
+      path: /shoppingCart/**
+      serviceId: store-shoppingCart
+    store-login-register:
+      path: /loginRegister/**
+      serviceId: store-login-register

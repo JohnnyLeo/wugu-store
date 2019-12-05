@@ -23,7 +23,7 @@ public class CartService {
         this.restTemplate = restTemplate;
     }
 
-    public boolean add(Cookie[] cookies, String phoneName) {
+    public boolean add(Cookie[] cookies, String phoneName, String number) {
         if (cookies == null) {
             return false;
         } else {
@@ -32,7 +32,7 @@ public class CartService {
                     String sessionID = cookie.getValue();
                     String userName = restTemplate.postForObject("http://localhost:8280/session/getAttribute", sessionID, String.class);
                     if (userName != null) {
-                        return cartDao.add(userName, phoneName);
+                        return cartDao.add(userName, phoneName, Integer.parseInt(number));
                     }
                 }
             }

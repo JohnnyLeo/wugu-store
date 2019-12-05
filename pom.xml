@@ -14,7 +14,7 @@
         <module>store-detail</module>
         <module>store-order-pay</module>
         <module>store-session</module>
-        <module>store-shoppingcart</module>
+        <module>store-shoppingCart</module>
         <module>store-login-register</module>
     </modules>
     <packaging>pom</packaging>
