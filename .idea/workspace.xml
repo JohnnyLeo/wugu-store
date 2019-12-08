@@ -1,19 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="1986aff7-b218-45ed-8c4f-908a07bff74f" name="Default Changelist" comment="fix bug of RPC;&#10;fix bug of data access;">
+    <list default="true" id="1986aff7-b218-45ed-8c4f-908a07bff74f" name="Default Changelist" comment="add login.html">
+      <change afterPath="$PROJECT_DIR$/store-login-register/src/main/resources/static/css/style.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/store-login-register/src/main/resources/static/js/ajaxUtil.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/store-login-register/src/main/resources/static/js/jquery.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/store-login-register/src/main/resources/static/login.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/store-login-register/src/main/java/com/wugu/store/dao/UserDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/store-login-register/src/main/java/com/wugu/store/dao/UserDao.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/store-login-register/src/main/java/com/wugu/store/web/LoginController.java" beforeDir="false" afterPath="$PROJECT_DIR$/store-login-register/src/main/java/com/wugu/store/web/LoginController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/store-login-register/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/store-login-register/src/main/resources/application.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/store-login-register/target/classes/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/store-login-register/target/classes/application.yml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/store-login-register/target/classes/com/wugu/store/dao/UserDao.class" beforeDir="false" afterPath="$PROJECT_DIR$/store-login-register/target/classes/com/wugu/store/dao/UserDao.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/store-login-register/target/classes/com/wugu/store/domain/User.class" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/store-login-register/target/classes/com/wugu/store/web/LoginController.class" beforeDir="false" afterPath="$PROJECT_DIR$/store-login-register/target/classes/com/wugu/store/web/LoginController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/store-session/src/main/java/com/wugu/store/web/RedisController.java" beforeDir="false" afterPath="$PROJECT_DIR$/store-session/src/main/java/com/wugu/store/web/RedisController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/store-zuul/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/store-zuul/src/main/resources/application.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/store-zuul/target/classes/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/store-zuul/target/classes/application.yml" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -125,7 +121,7 @@
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/store-login-register/src/main/resources/static/js" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="project.structure.last.edited" value="Modules" />
@@ -144,9 +140,11 @@
       <recent name="com.wugu.store.web" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\IDEA\java web\wugustore\store-login-register\src\main\resources\static\js" />
+      <recent name="D:\IDEA\java web\wugustore\store-login-register\src\main\resources\static\css" />
+      <recent name="D:\IDEA\java web\wugustore\store-login-register\src\main\resources\static" />
       <recent name="D:\IDEA\java web\wugustore\store-shoppingcart\src\main\java\com.wugu.store" />
       <recent name="D:\IDEA\java web\wugustore\store-order-pay\src\main\java\com.wugu.store" />
-      <recent name="D:\IDEA\java web\wugustore\store-main\src\main\java\com.wugu.store" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -161,7 +159,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Spring Boot.Zuul">
+  <component name="RunManager" selected="Spring Boot.Login-Register">
     <configuration name="Detail" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
       <module name="store-detail" />
       <option name="SPRING_BOOT_MAIN_CLASS" value="com.wugu.store.DetailApplication" />
@@ -336,7 +334,8 @@
       <workItem from="1575517354588" duration="10717000" />
       <workItem from="1575696692741" duration="1634000" />
       <workItem from="1575698754398" duration="7553000" />
-      <workItem from="1575784858253" duration="1620000" />
+      <workItem from="1575784858253" duration="7088000" />
+      <workItem from="1575795871825" duration="980000" />
     </task>
     <task id="LOCAL-00001" summary="add session;login-register">
       <created>1574670885658</created>
@@ -408,7 +407,14 @@
       <option name="project" value="LOCAL" />
       <updated>1575527390755</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="fix bug of RPC;&#10;fix bug of data access;">
+      <created>1575786660242</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1575786660242</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -440,6 +446,7 @@
     <MESSAGE value="add filter of login; add filter of some url; change Message's property" />
     <MESSAGE value="add filter of login; add filter of some url; change Message's property; add PhoneDao;" />
     <MESSAGE value="fix bug of RPC;&#10;fix bug of data access;" />
-    <option name="LAST_COMMIT_MESSAGE" value="fix bug of RPC;&#10;fix bug of data access;" />
+    <MESSAGE value="add login.html" />
+    <option name="LAST_COMMIT_MESSAGE" value="add login.html" />
   </component>
 </project>

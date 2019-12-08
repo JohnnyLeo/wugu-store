@@ -12,6 +12,7 @@ import org.springframework.web.client.RestTemplate;
 import javax.servlet.http.Cookie;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import java.io.IOException;
 import java.util.UUID;
 
 @RestController
@@ -37,7 +38,7 @@ public class LoginController {
     }
 
     @RequestMapping(value = "/doLogin")
-    public boolean doLogin(HttpServletRequest request, HttpServletResponse response) {
+    public void doLogin(HttpServletRequest request, HttpServletResponse response) throws IOException {
         String userName = request.getParameter("userName");
         String passWord = request.getParameter("password");
         // {查数据库}
@@ -51,9 +52,11 @@ public class LoginController {
             Cookie cookie = new Cookie("sessionID", sessionID);
             cookie.setMaxAge(60 * 60);
             response.addCookie(cookie);
-            return true;
+            response.setHeader("Access-Control-Allow-Origin", "*");
+            response.setContentType("text/plain");
+            response.getWriter().write("true");
+            System.out.println("1");
         } else {
-            return false;
         }
     }
 
