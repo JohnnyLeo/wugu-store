@@ -1,15 +1,20 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="1986aff7-b218-45ed-8c4f-908a07bff74f" name="Default Changelist" comment="add login.html">
-      <change afterPath="$PROJECT_DIR$/store-login-register/src/main/resources/static/css/style.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/store-login-register/src/main/resources/static/js/ajaxUtil.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/store-login-register/src/main/resources/static/js/jquery.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/store-login-register/src/main/resources/static/login.html" afterDir="false" />
+    <list default="true" id="1986aff7-b218-45ed-8c4f-908a07bff74f" name="Default Changelist" comment="change detail.html.title">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/store-login-register/src/main/java/com/wugu/store/web/LoginController.java" beforeDir="false" afterPath="$PROJECT_DIR$/store-login-register/src/main/java/com/wugu/store/web/LoginController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/store-login-register/target/classes/com/wugu/store/dao/UserDao.class" beforeDir="false" afterPath="$PROJECT_DIR$/store-login-register/target/classes/com/wugu/store/dao/UserDao.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/store-login-register/target/classes/com/wugu/store/web/LoginController.class" beforeDir="false" afterPath="$PROJECT_DIR$/store-login-register/target/classes/com/wugu/store/web/LoginController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/store-detail/src/main/resources/static/CaoMiPro.html" beforeDir="false" afterPath="$PROJECT_DIR$/store-detail/src/main/resources/static/CaoMiPro.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/store-detail/src/main/resources/static/DaDouPro.html" beforeDir="false" afterPath="$PROJECT_DIR$/store-detail/src/main/resources/static/DaDouPro.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/store-detail/src/main/resources/static/DaMiAlpha.html" beforeDir="false" afterPath="$PROJECT_DIR$/store-detail/src/main/resources/static/DaMiAlpha.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/store-detail/src/main/resources/static/HeiMiMix.html" beforeDir="false" afterPath="$PROJECT_DIR$/store-detail/src/main/resources/static/HeiMiMix.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/store-detail/src/main/resources/static/HongShuFind.html" beforeDir="false" afterPath="$PROJECT_DIR$/store-detail/src/main/resources/static/HongShuFind.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/store-detail/src/main/resources/static/MaLingShuNex.html" beforeDir="false" afterPath="$PROJECT_DIR$/store-detail/src/main/resources/static/MaLingShuNex.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/store-detail/src/main/resources/static/NuoMIZ20.html" beforeDir="false" afterPath="$PROJECT_DIR$/store-detail/src/main/resources/static/NuoMIZ20.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/store-detail/src/main/resources/static/XiaoMaiMate.html" beforeDir="false" afterPath="$PROJECT_DIR$/store-detail/src/main/resources/static/XiaoMaiMate.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/store-detail/src/main/resources/static/YanMaiX11.html" beforeDir="false" afterPath="$PROJECT_DIR$/store-detail/src/main/resources/static/YanMaiX11.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/store-detail/src/main/resources/static/YuMiPlus.html" beforeDir="false" afterPath="$PROJECT_DIR$/store-detail/src/main/resources/static/YuMiPlus.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/store-detail/src/main/resources/static/contact.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/store-detail/src/main/resources/static/pricing.html" beforeDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -159,7 +164,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Spring Boot.Login-Register">
+  <component name="RunManager" selected="Spring Boot.Detail">
     <configuration name="Detail" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
       <module name="store-detail" />
       <option name="SPRING_BOOT_MAIN_CLASS" value="com.wugu.store.DetailApplication" />
@@ -335,7 +340,7 @@
       <workItem from="1575696692741" duration="1634000" />
       <workItem from="1575698754398" duration="7553000" />
       <workItem from="1575784858253" duration="7088000" />
-      <workItem from="1575795871825" duration="980000" />
+      <workItem from="1575795871825" duration="3302000" />
     </task>
     <task id="LOCAL-00001" summary="add session;login-register">
       <created>1574670885658</created>
@@ -414,7 +419,14 @@
       <option name="project" value="LOCAL" />
       <updated>1575786660242</updated>
     </task>
-    <option name="localTasksCounter" value="12" />
+    <task id="LOCAL-00012" summary="add login.html">
+      <created>1575804600098</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1575804600098</updated>
+    </task>
+    <option name="localTasksCounter" value="13" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -447,6 +459,7 @@
     <MESSAGE value="add filter of login; add filter of some url; change Message's property; add PhoneDao;" />
     <MESSAGE value="fix bug of RPC;&#10;fix bug of data access;" />
     <MESSAGE value="add login.html" />
-    <option name="LAST_COMMIT_MESSAGE" value="add login.html" />
+    <MESSAGE value="change detail.html.title" />
+    <option name="LAST_COMMIT_MESSAGE" value="change detail.html.title" />
   </component>
 </project>
