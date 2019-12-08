@@ -39,7 +39,7 @@ public class LoginController {
     @RequestMapping(value = "/doLogin")
     public boolean doLogin(HttpServletRequest request, HttpServletResponse response) {
         String userName = request.getParameter("userName");
-        String passWord = request.getParameter("passWord");
+        String passWord = request.getParameter("password");
         // {查数据库}
         if (loginService.doLogin(userName, passWord)) {
             // {存redis}
@@ -47,7 +47,7 @@ public class LoginController {
             WuguSession wuguSession = new WuguSession();
             wuguSession.setSessionID(sessionID);
             wuguSession.setUserName(userName);
-            restTemplate.put("http://localhost:8280/session/createSession", wuguSession);
+            restTemplate.postForEntity("http://localhost:8280/session/createSession", wuguSession, Boolean.class);
             Cookie cookie = new Cookie("sessionID", sessionID);
             cookie.setMaxAge(60 * 60);
             response.addCookie(cookie);
@@ -58,7 +58,7 @@ public class LoginController {
     }
 
     @RequestMapping(value = "/loginOut")
-    public void loginOut(@RequestBody String sessionID) {
-        restTemplate.delete("http://localhost:8280/session/removeSession", sessionID);
+    public boolean loginOut(@RequestBody String sessionID) {
+        return restTemplate.postForObject("http://localhost:8280/session/removeSession", sessionID, Boolean.class);
     }
 }

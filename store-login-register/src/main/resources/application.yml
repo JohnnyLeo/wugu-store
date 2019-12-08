@@ -4,9 +4,9 @@ spring:
   datasource:
     type: com.alibaba.druid.pool.DruidDataSource
     druid:
-      url: jdbc:mysql://localhost:3306/wugustore
+      url: jdbc:mysql://localhost:3306/wugustore?useUnicode=true&characterEncoding=utf8&useSSL=false
       username: root
-      password: 123456
+      password: root
       driver-class-name: com.mysql.cj.jdbc.Driver
 
 server:

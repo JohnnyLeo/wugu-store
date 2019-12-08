@@ -18,7 +18,7 @@ zuul:
   host:
     connect-timeout-millis: 10000
     socket-timeout-millis: 60000
-  sensitive-headers:
+  sensitive-headers: Access-Control-Allow-Origin,Access-Control-Allow-Methods
   routes:
     store-main:
       path: /main/**
@@ -30,5 +30,8 @@ zuul:
       path: /order/**
       serviceId: store-order-pay
     store-shoppingcart:
-      path: /shoppingcart/**
-      serviceId: store-shoppingcart
+      path: /shoppingCart/**
+      serviceId: store-shoppingCart
+    store-login-register:
+      path: /loginRegister/**
+      serviceId: store-login-register

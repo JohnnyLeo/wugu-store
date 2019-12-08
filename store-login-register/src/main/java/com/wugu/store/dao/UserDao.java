@@ -2,9 +2,12 @@ package com.wugu.store.dao;
 
 import com.wugu.store.domain.User;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.jdbc.core.BeanPropertyRowMapper;
 import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.stereotype.Repository;
 import org.springframework.transaction.annotation.Transactional;
+
+import java.util.List;
 
 @Repository
 public class UserDao {
@@ -27,12 +30,18 @@ public class UserDao {
      */
     @Transactional
     public boolean selectUserName(String userName) {
-        return jdbcTemplate.queryForObject(selectUserNameSql, new Object[]{userName}, User.class) == null;
+        List<User> userList = jdbcTemplate.query(selectUserNameSql, new Object[]{userName}, new BeanPropertyRowMapper<>(User.class));
+        return userList != null && userList.size() > 0;
     }
 
     @Transactional
     public User selectUser(String userName, String passWord) {
-        return jdbcTemplate.queryForObject(selectUserSql, new Object[]{userName, passWord}, User.class);
+        List<User> userList = jdbcTemplate.query(selectUserSql, new Object[]{userName, passWord}, new BeanPropertyRowMapper<>(User.class));
+        if(null != userList && userList.size()>0){
+            return userList.get(0);
+        } else {
+            return null;
+        }
     }
 
     @Transactional

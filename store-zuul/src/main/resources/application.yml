@@ -10,15 +10,8 @@ eureka:
     service-url:
       defaultZone: http://localhost:8180/eureka/
 
-ribbon:
-  connectTimeout: 2000
-  readTimeout: 5000
-
 zuul:
-  host:
-    connect-timeout-millis: 10000
-    socket-timeout-millis: 60000
-  sensitive-headers:
+  sensitive-headers: Access-Control-Allow-Origin,Access-Control-Allow-Methods
   routes:
     store-main:
       path: /main/**

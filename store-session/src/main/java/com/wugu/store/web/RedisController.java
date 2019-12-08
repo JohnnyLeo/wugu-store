@@ -24,9 +24,8 @@ public class RedisController {
     @RequestMapping(value = "/createSession")
     public boolean createSession(@RequestBody WuguSession session) {
         if (session.getSessionID() != null && session.getUserName() != null) {
-            redisTemplate.opsForValue().set(session.getSessionID(), null);
             redisTemplate.boundHashOps(session.getSessionID()).put(SESSION_ATTRIBUTE_USER_KEY, session.getUserName());
-            redisTemplate.expire(session, SESSION_TIME_OUT, TimeUnit.MINUTES);
+            redisTemplate.expire(session.getSessionID(), SESSION_TIME_OUT, TimeUnit.MINUTES);
             return true;
         } else {
             return false;
@@ -90,9 +89,12 @@ public class RedisController {
     }
 
     @RequestMapping(value = "/removeSession")
-    public void removeSession(@RequestBody String sessionID) {
+    public boolean removeSession(@RequestBody String sessionID) {
         if (selectSession(sessionID)) {
             redisTemplate.delete(sessionID);
+            return true;
+        } else {
+            return false;
         }
     }
 }
