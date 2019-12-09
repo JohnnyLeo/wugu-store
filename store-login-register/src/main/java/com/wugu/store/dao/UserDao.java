@@ -26,7 +26,7 @@ public class UserDao {
     /**
      *
      * @param userName need to be unique
-     * @return true:userName has not been used; false:userName has been used
+     * @return false:userName has not been used; true:userName has been used
      */
     @Transactional
     public boolean selectUserName(String userName) {

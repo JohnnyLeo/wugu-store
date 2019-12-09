@@ -84,7 +84,11 @@
 				   		params: "userName="+userName.value+"&password="+password.value,
 				   		type: HTTP_RESPONSE_TYPE.TEXT,
 				   		callback: function(data) {
-				   			alert(data);
+				   			if (data.toString() === "true") {
+				   				alert("登录成功！");
+							} else {
+				   				alert("登录失败！请检查用户名和密码！");
+							}
 				   		}
 					});
 				}
@@ -95,10 +99,48 @@
 		register.onclick = function(){
 			if (register_flag) {
 				// 判断不为空
-				
-				// 判断不重名
-				
-				// 提交
+				if (userName.value == "") {
+					userName.style.border = "2px solid red";
+				} else if (password.value == "") {
+					userName.style.border  = "2px solid black";
+					password.style.border  = "2px solid red";
+				} else if (password_confirm.value == "") {
+					password.style.border  = "2px solid black";
+					password_confirm.style.border  = "2px solid red";
+				} else {
+					password_confirm.style.border  = "2px solid black";
+					// 判断不重名
+					ajax({
+						method: HTTP_METHOD.POST,
+						url: "http://localhost/loginRegister/register/userNameVerify",
+						async: true,
+						params: "userName="+userName.value,
+						type: HTTP_RESPONSE_TYPE.TEXT,
+						callback: function(data) {
+							if (data.toString() === "true") {
+								userName.style.border = "2px solid red";
+								alert("用户名被占用！换个名字试试吧。");
+							} else {
+								userName.style.border  = "2px solid black";
+								// 提交
+								ajax({
+									method: HTTP_METHOD.POST,
+									url: "http://localhost/loginRegister/register/doRegister",
+									async: true,
+									params: "userName="+userName.value+"&password="+password.value,
+									type: HTTP_RESPONSE_TYPE.TEXT,
+									callback: function(data) {
+										if (data.toString() === "true") {
+											alert("注册成功！");
+										} else {
+											alert("注册失败！待会儿再试试吧");
+										}
+									}
+								});
+							}
+						}
+					});
+				}
 			} else {
 				h2.innerHTML = "注册";
 				password_confirm_div.style.display = "block";
