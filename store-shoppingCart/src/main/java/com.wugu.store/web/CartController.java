@@ -26,7 +26,7 @@ public class CartController {
     @RequestMapping(value = "/add")
     public boolean add(HttpServletRequest request, HttpServletResponse response){
         Cookie[] cookies = request.getCookies();
-        if (cartService.add(cookies, request.getParameter("phoneName"), request.getParameter("number"))) {
+        if (cartService.add(cookies, request.getParameter("phoneName"))) {
             return true;
         } else {
             try {
@@ -36,5 +36,17 @@ public class CartController {
             }
             return false;
         }
+    }
+
+    @RequestMapping(value = "delete")
+    public boolean delete(HttpServletRequest request) {
+        return cartService.delete(request.getParameter("messageID"));
+    }
+
+    @RequestMapping(value = "select")
+    public void select(HttpServletRequest request, HttpServletResponse response) throws IOException {
+        Cookie[] cookies = request.getCookies();
+        response.setContentType("text/json");
+        response.getWriter().write(cartService.select(cookies));
     }
 }

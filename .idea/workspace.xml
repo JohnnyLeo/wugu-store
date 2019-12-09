@@ -3,10 +3,11 @@
   <component name="ChangeListManager">
     <list default="true" id="1986aff7-b218-45ed-8c4f-908a07bff74f" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/store-login-register/src/main/java/com/wugu/store/dao/UserDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/store-login-register/src/main/java/com/wugu/store/dao/UserDao.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/store-login-register/src/main/java/com/wugu/store/web/RegisterController.java" beforeDir="false" afterPath="$PROJECT_DIR$/store-login-register/src/main/java/com/wugu/store/web/RegisterController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/store-login-register/src/main/resources/static/login.html" beforeDir="false" afterPath="$PROJECT_DIR$/store-login-register/src/main/resources/static/login.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/store-login-register/target/classes/com/wugu/store/web/LoginController.class" beforeDir="false" afterPath="$PROJECT_DIR$/store-login-register/target/classes/com/wugu/store/web/LoginController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/store-detail/src/main/java/com.wugu.store/web/LoginController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/store-shoppingCart/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/store-shoppingCart/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/store-shoppingCart/src/main/java/com.wugu.store/dao/CartDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/store-shoppingCart/src/main/java/com.wugu.store/dao/CartDao.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/store-shoppingCart/src/main/java/com.wugu.store/service/CartService.java" beforeDir="false" afterPath="$PROJECT_DIR$/store-shoppingCart/src/main/java/com.wugu.store/service/CartService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/store-shoppingCart/src/main/java/com.wugu.store/web/CartController.java" beforeDir="false" afterPath="$PROJECT_DIR$/store-shoppingCart/src/main/java/com.wugu.store/web/CartController.java" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -334,7 +335,9 @@
       <workItem from="1575784858253" duration="7088000" />
       <workItem from="1575795871825" duration="3572000" />
       <workItem from="1575869818907" duration="683000" />
-      <workItem from="1575871572009" duration="2486000" />
+      <workItem from="1575871572009" duration="2763000" />
+      <workItem from="1575880489383" duration="2025000" />
+      <workItem from="1575904105133" duration="2899000" />
     </task>
     <task id="LOCAL-00001" summary="add session;login-register">
       <created>1574670885658</created>
@@ -434,7 +437,14 @@
       <option name="project" value="LOCAL" />
       <updated>1575872782876</updated>
     </task>
-    <option name="localTasksCounter" value="15" />
+    <task id="LOCAL-00015" summary="add /register">
+      <created>1575874313926</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1575874313926</updated>
+    </task>
+    <option name="localTasksCounter" value="16" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -469,6 +479,7 @@
     <MESSAGE value="add login.html" />
     <MESSAGE value="change detail.html.title" />
     <MESSAGE value="fix jQuery.ajax cannot access data from nginx" />
-    <option name="LAST_COMMIT_MESSAGE" value="fix jQuery.ajax cannot access data from nginx" />
+    <MESSAGE value="add /register" />
+    <option name="LAST_COMMIT_MESSAGE" value="add /register" />
   </component>
 </project>
