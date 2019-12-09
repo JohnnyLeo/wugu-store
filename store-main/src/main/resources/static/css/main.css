@@ -1,0 +1,46 @@
+a:link{
+	text-decoration: none;
+}
+.nav-img{
+	float: left;
+	height: 70px;
+	line-height: 70px;
+}
+.nav-img img{
+	border-radius: 6px;
+}
+.nav-search{
+	float: left;
+	height: 70px;
+	line-height: 70px;
+	margin-left: 100px;
+	width: 324px;
+}
+.search-bar{
+	height: 32px;
+	width: 324px;
+	border: none;
+	outline: none;
+	background-image: url(../images/search.png);
+	padding-left: 16px;
+	border-radius: 50px;
+}
+.navbar-right{
+	float: left !important;
+	margin-left: 36px;
+}
+.login-register{
+	float: left;
+	margin-left: 36px;
+	height: 70px;
+	line-height: 70px;
+}
+.login-register li{
+	display: inline;
+}
+.row-footer li{
+	display: inline;
+	margin-left: 16px;
+	
+}
+
