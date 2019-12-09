@@ -77,24 +77,16 @@
 					userName.style.border  = "2px solid black";
 					password.style.border  = "2px solid black";
 					// 提交
-					$.ajax({
-						 url: "http://localhost:8080/loginRegister/login/doLogin",
-						 type: "POST",
-						 data: "userName="+userName.value+"&password="+password.value,
-						 success: function(data) {
+					ajax({
+						method: HTTP_METHOD.POST,
+				   		url: "http://localhost/loginRegister/login/doLogin",
+				   		async: true,
+				   		params: "userName="+userName.value+"&password="+password.value,
+				   		type: HTTP_RESPONSE_TYPE.TEXT,
+				   		callback: function(data) {
 				   			alert(data);
 				   		}
 					});
-//					ajax({
-//						method: HTTP_METHOD.POST, 
-//				   		url: "http://localhost:8050/login/doLogin",
-//				   		async: true, 
-//				   		params: "userName="+userName.value+"&password="+password.value,
-//				   		type: HTTP_RESPONSE_TYPE.TEXT, 
-//				   		callback: function(data) {
-//				   			alert(data);
-//				   		}
-//					})
 				}
 			}
 

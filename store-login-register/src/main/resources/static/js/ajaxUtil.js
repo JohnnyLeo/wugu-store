@@ -81,7 +81,6 @@ function ajax(option) {
 	xmlHttp.send(option.params);
 	xmlHttp.onreadystatechange = function() {
 		if (xmlHttp.readyState == 4 && xmlHttp.status == 200) {
-			alert("123");
 			var data;
 			if (option.type == HTTP_RESPONSE_TYPE.XML) {
 				data = xmlHttp.responseXML;
