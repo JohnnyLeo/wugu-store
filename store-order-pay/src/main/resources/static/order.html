@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="order.css"">
+  <script src="jquery-1.12.4.js"></script>
+  <script src="ajaxUtil.js"></script>
+  <script>
+      $(function(){
+          $.ajax({
+              url:"http://localhost:8080/homework/Order_get",
+              data:"orders="+orders.value,//接收订单类json对象数组
+              error:function(){
+                  alert("请求失败！");
+              },
+              complete:function(){},
+              dataType:JSON
+          })
+
+          $.ajax({
+
+            url:"http://localhost:8080/homework/Order_get",
+            data:"sum="+sum,//接收总金额
+            success:function(){},
+            dataType:Text
+
+          })
+
+
+          $("#order").empty();
+
+          for(var i = 0;i < orders.length;i++){
+              var $str = $("<tr></tr>");
+
+              $str.append("<th>"+orders[i].Id+"</th>");//拼接订单类的订单号
+              $str.append("<th>"+orders[i].name+"</th>");//拼接订单类的客户名
+              $str.append("<th>"+orders[i].commodity+"</th>");//拼接订单类的商品名
+              $str.append("<th>"+orders[i].price+"</th>"); //拼接订单类的商品价格
+              $str.append("<th>"+prders[i].number+"</th>");//拼接订单类的商品数量
+
+               
+              $str.appendTo("#order");
+          };
+          $("#sum").val=sum;
+      })
+  </script>
+
+    <title>Document</title>
+    
+</head>
+<body>
+<div id="container" >
+    
+            <table class= "order">
+                    <thead>
+                            <th width= "35%">订单号</th>
+                            <th width= "10%">客户名</th>
+                            <th width= "30%">商品</th>
+                            <th width= "15%">数量</th>
+                            <th width= "10%">单价</th> 
+                    </thead>
+                    <tr>
+                              
+                    </tr>
+                    <tbody id="order">
+            
+                    </tbody>
+                    
+                </table>
+                
+    <div id="div1" >
+        支付金额：<input type="text" value="123" readonly id="sum">
+        <div id="btn"><button type="submit" formaction="#" class="button" class=" button">结算</button> </div>
+    </div>
+    
+    
+  
+   
+</div>
+
+</body>
+</html>
