@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="css/order.css"">
+    
+	<!-- Icomoon Icon Fonts-->
+	<link rel="stylesheet" href="css/icomoon.css">
+
+	<!-- Bootstrap  -->
+	<link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" type="text/css" href="css/main.css"/>
+	
+	<!-- Styleswitcher ( This style is for demo purposes only, you may delete this anytime. ) -->
+	<link rel="stylesheet" id="theme-switch" href="css/style.css">
+
+  <script src="js/jquery-1.12.4.js"></script>
+  <script src="js/ajaxUtil.js"></script>
+  <script>
+      $(function(){
+        //   $.ajax({
+        //       url:"http://localhost:8080/homework/Order_get",
+        //       data:"orders="+orders.value,//接收订单类json对象数组
+        //       error:function(){
+        //           alert("请求失败！");
+        //       },
+        //       complete:function(){},
+        //       dataType:JSON
+        //   })
+
+        //   $.ajax({
+
+        //     url:"http://localhost:8080/homework/Order_get",
+        //     data:"sum="+sum,//接收总金额
+        //     success:function(){},
+        //     dataType:Text
+
+        //   })
+        var orders=[
+            {
+                "Id":"001",
+                "name":"a",
+                "commodity":"dami",
+                "price":1999,
+                "number":1
+
+            },
+            {
+                "Id":"002",
+                "name":"b",
+                "commodity":"xiaomi",
+                "price":2999,
+                "number":2
+            },
+            {
+                "Id":"002",
+                "name":"b",
+                "commodity":"xiaomi",
+                "price":2999,
+                "number":2
+            },
+            {
+                "Id":"002",
+                "name":"b",
+                "commodity":"xiaomi",
+                "price":2999,
+                "number":2
+            },
+            {
+                "Id":"002",
+                "name":"b",
+                "commodity":"xiaomi",
+                "price":2999,
+                "number":2
+            }
+        ]
+var sum = 4998;
+
+          $("#order").empty();
+
+          for(var i = 0;i < orders.length;i++){
+              var $str = $("<tr></tr>");
+
+              $str.append("<th>"+orders[i].Id+"</th>");//拼接订单类的订单号
+              $str.append("<th>"+orders[i].name+"</th>");//拼接订单类的客户名
+              $str.append("<th>"+orders[i].commodity+"</th>");//拼接订单类的商品名
+              $str.append("<th>"+orders[i].price+"</th>"); //拼接订单类的商品价格
+              $str.append("<th>"+orders[i].number+"</th>");//拼接订单类的商品数量
+
+               
+              $str.appendTo("#order");
+          };
+          $("#sum").html(sum);
+      })
+  </script>
+
+    <title>Document</title>
+    
+</head>
+<body>
+    	<header role="banner" id="fh5co-header">
+                <div class="container">
+                    <!-- <div class="row"> -->
+                    <nav class="navbar navbar-default">
+                    <div class="navbar-header">
+                        <!-- Mobile Toggle Menu Button -->
+                        <a class="nav-img" href="#"><img  src="./images/wg.jpg" width="60px" height="60px"/></a>
+                        <a href="#" class="js-fh5co-nav-toggle fh5co-nav-toggle" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar"><i></i></a>
+                          <a class="navbar-brand" href="index.html" style="margin-left: 20px;">五谷商城</a> 
+                    </div>
+                    <div class="nav-search">
+                         <input type="text" class="search-bar" placeholder="大米 MIX Alpha">
+                    </div>
+                    <div id="navbar" class="navbar-collapse collapse">
+                      <ul class="nav navbar-nav navbar-right">
+                        <li class="active"><a href="./index.html" ><span>首页</span></a></li>
+                        <li><a href="./shopping.html" target="_blank"><span>购物车</span></a></li>
+                        <li><a href="./order/index.html" target="_blank"><span>我的订单</span></a></li>
+                        <li><a href="./order/pay.html" target="_blank"><span>已购买</span></a></li>
+                      </ul>
+                      <ul class="login-register">
+                            <li><a href="./login.html" target="_blank">登录</a> &#47; </li>
+                            <li><a href="./register.html" target="_blank">注册</a></li>
+                      </ul>
+                    </div>
+                    
+                    </nav>
+                  <!-- </div> -->
+              </div>
+        </header>
+      
+
+	
+
+
+<div id="container" >
+    
+            <table class= "order">
+                    <thead>
+                            <th width= "35%">订单号</th>
+                            <th width= "10%">客户名</th>
+                            <th width= "30%">商品</th>
+                            <th width= "15%">单价</th>
+                            <th width= "10%">数量</th> 
+                    </thead>
+                    <tr>
+                              
+                    </tr>
+                    <tbody id="order">
+            
+                    </tbody>
+                    
+                </table>
+                
+    <div id="div1" >
+       <label>支付金额：</label><label id="sum"></label>
+        <div id="btn"><button type="submit" formaction="http://localhost:8080/homework/Order_get" class="button" class=" button">结算</button> </div>
+    </div>
+    
+    
+  
+   
+</div>
+
+<footer id="footer" role="contentinfo">
+		<div class="container">
+			<div class="row row-bottom-padded-sm">
+				<div class="col-md-12">
+					<p class="copyright text-center">&copy; <a href="index.html"> 2019 五谷科技有限责任公司</a> <br> 公司成员&#58;刘囧&nbsp;周柏吏&nbsp;刘海&nbsp;张鑫屿&nbsp;王赛  | 若有侵权,我们必究&#33;&#33;&#33;</p>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-md-12 text-center">
+					<ul class="row-footer">
+						<li><a href="#"><i class="icon-twitter">关于我们</i></a></li>
+						<li><a href="#"><i class="icon-facebook">联系我们</i></a></li>
+						<li><a href="#"><i class="icon-youtube">加入我们</i></a></li>
+						<li><a href="#"><i class="icon-pinterest">帮助中心</i></a></li>
+						<li><a href="#"><i class="icon-linkedin">活动中心</i></a></li>
+						<li><a href="#"><i class="icon-instagram">用户反馈</i></a></li>
+						<li><a href="#"><i class="icon-dribbble">侵权申诉</i></a></li>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</footer>
+	
+	
+	
+
+</body>
+</html>
