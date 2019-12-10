@@ -38,7 +38,7 @@ public class LoginController {
     }
 
     @RequestMapping(value = "/doLogin")
-    public boolean doLogin(HttpServletRequest request, HttpServletResponse response) {
+    public boolean doLogin(HttpServletRequest request, HttpServletResponse response) throws IOException {
         String userName = request.getParameter("userName");
         String passWord = request.getParameter("password");
         // {查数据库}
@@ -51,6 +51,8 @@ public class LoginController {
             restTemplate.postForEntity("http://localhost:8280/session/createSession", wuguSession, Boolean.class);
             Cookie cookie = new Cookie("sessionID", sessionID);
             cookie.setMaxAge(60 * 60);
+            cookie.setDomain("localhost");
+            cookie.setPath("/");
             response.addCookie(cookie);
             return true;
         } else {

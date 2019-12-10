@@ -31,7 +31,7 @@ public class LoginFilter extends ZuulFilter {
         RequestContext requestContext = RequestContext.getCurrentContext();
         requestContext.setSendZuulResponse(false);
         try {
-            requestContext.getResponse().sendRedirect("http://localhost:80/loginRegister/login.html");
+            requestContext.getResponse().sendRedirect("http://localhost/loginRegister/login.html");
         } catch (IOException e) {
             e.printStackTrace();
         }

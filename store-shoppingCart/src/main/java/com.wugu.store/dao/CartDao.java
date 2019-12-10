@@ -14,7 +14,7 @@ public class CartDao {
 
     private final static String insertMessageSql = "insert into message values (?, ?, ?, ?, ?, ?)";
     private final static String deleteMessageSql = "delete from message where messageid = ?";
-    private final static String selectMessageSql = "select * from message where userName = ? and status = 1";
+    private final static String selectMessageSql = "select * from message where username = ? and status = 1";
 
     private JdbcTemplate jdbcTemplate;
 
@@ -34,7 +34,7 @@ public class CartDao {
     public boolean add(String userName, String phoneName) {
         Message message = new Message();
         UUID messageID = UUID.randomUUID();
-        message.setMessageID(messageID);
+        message.setMessageID(messageID.toString());
         message.setUserName(userName);
         message.setPhoneName(phoneName);
         message.setPrice(phoneDao.select(phoneName).getPhonePrice());

@@ -1,51 +1,37 @@
-package homework_Dao;
+package com.wugu.store.dao;
 
-import java.util.ArrayList;
+import com.wugu.store.domain.Message;
+import com.wugu.store.domain.User;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.jdbc.core.BeanPropertyRowMapper;
+import org.springframework.jdbc.core.JdbcTemplate;
+import org.springframework.stereotype.Repository;
+
 import java.util.List;
 
-import org.omg.CORBA.PUBLIC_MEMBER;
-
-import homework_entity.Order;
-
+@Repository
 public class OrderDao {
-	
-	public  List<Order> queryAllOrders(){//查询未支付的订单
-		
-		List<Order> orders = new ArrayList<>();
-		String sql = "select * from message where status = 2 and username = ?";
-		//jdbcTemplate.queryForObject(sql,new Object[username],Order)
-		
-	
-		return orders;
-		
-	}
-	public boolean updateOrdersStatus(){//修改订单状态
-		boolean flag = false;
-		String sql = "update message set status = 3 where status = 2 and username = ?";
-		
-		
-		return flag;
-	}
-	public float sum(){
-		float sum = 0;
-		List<Order> orders = new ArrayList<>();
-		orders = queryAllOrders();
-		for(Order order:orders){
-			sum += order.getPrice()*(float)order.getnumber();
-		}
-		
-		return sum;
-	}
-	
-	public  List<Order> queryAllFinishedOrders(){//查询已完成支付的订单
-		
-		List<Order> orders = new ArrayList<>();
-		String sql = "select * from message where status = 3 and username = ?";
-		//jdbcTemplate.queryForObject(sql,new Object[username],Order)
-		
-	
-		return orders;
-		
-	}
 
+    private final static String selectOrderSql = "select * from message where message.username = ? and message.status = 2";
+    private final static String payOrderSql = "update message set status = 3 where username = ? and status = 2";
+    private final static String addOrderSql = "update message set status = 2 where username = ? and phonename = ?";
+
+    private JdbcTemplate jdbcTemplate;
+
+    @Autowired
+    public void setJdbcTemplate(JdbcTemplate jdbcTemplate) {
+        this.jdbcTemplate = jdbcTemplate;
+    }
+
+    public List<Message> select(String userName) {
+        return jdbcTemplate.query(selectOrderSql, new Object[]{userName}, new BeanPropertyRowMapper<>(Message.class));
+    }
+
+    public boolean pay(String userName) {
+        return jdbcTemplate.update(payOrderSql, userName) != 0;
+    }
+
+    public boolean add(String userName, String phoneName) {
+        return jdbcTemplate.update(addOrderSql, new Object[]{userName, phoneName}) == 1;
+    }
 }

@@ -3,12 +3,12 @@ package com.wugu.store.domain;
 import java.util.UUID;
 
 public class Message {
-    private UUID messageID;
+    private String messageID;
     private String userName;
     private String phoneName;
     private Integer price;
     private Integer number;
-    private Integer state;
+    private Integer status;
 
     public int getPrice() {
         return price;
@@ -26,11 +26,11 @@ public class Message {
         this.number = number;
     }
 
-    public UUID getMessageID() {
+    public String getMessageID() {
         return messageID;
     }
 
-    public void setMessageID(UUID messageID) {
+    public void setMessageID(String messageID) {
         this.messageID = messageID;
     }
 
@@ -50,11 +50,11 @@ public class Message {
         this.phoneName = phoneName;
     }
 
-    public int getState() {
-        return state;
+    public Integer getStatus() {
+        return status;
     }
 
-    public void setState(int state) {
-        this.state = state;
+    public void setStatus(Integer status) {
+        this.status = status;
     }
 }

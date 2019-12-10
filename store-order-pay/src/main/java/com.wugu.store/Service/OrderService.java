@@ -1,24 +1,82 @@
-package zbl_homework_Service;
+package com.wugu.store.service;
 
-import java.util.List;
+import com.alibaba.fastjson.JSON;
+import com.wugu.store.dao.OrderDao;
+import com.wugu.store.domain.WuguAttribute;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+import org.springframework.web.client.RestTemplate;
 
-import homework_Dao.OrderDao;
-import homework_entity.Order;
+import javax.servlet.http.Cookie;
 
+@Service
 public class OrderService {
-	OrderDao orderDao = new OrderDao();
-	public List<Order> queryAllOrders(){//查询数据库订单为未支付的订单
-		return orderDao.queryAllOrders();
-	}
-	public boolean updateOrdersStatus(){//订单完成后修改数据库的订单状态
-		 return orderDao.updateOrdersStatus();
-		
-	}
-	public float sum(){
-		
-		return orderDao.sum();
-	}
 
-	
+    private OrderDao orderDao;
+    private RestTemplate restTemplate;
 
+    @Autowired
+    public void setRestTemplate(RestTemplate restTemplate) {
+        this.restTemplate = restTemplate;
+    }
+
+    @Autowired
+    public void setOrderDao(OrderDao orderDao) {
+        this.orderDao = orderDao;
+    }
+
+    public String select(Cookie[] cookies) {
+        if (cookies != null) {
+            for (Cookie cookie : cookies) {
+                if ("sessionID".equals(cookie.getName())) {
+                    String sessionID = cookie.getValue();
+                    WuguAttribute wuguAttribute = new WuguAttribute();
+                    wuguAttribute.setSessionID(sessionID);
+                    wuguAttribute.setKey("userName");
+                    String userName = restTemplate.postForObject("http://localhost:8280/session/getAttribute", wuguAttribute, String.class);
+                    if (userName != null) {
+                        return JSON.toJSONString(orderDao.select(userName));
+
+                    }
+                }
+            }
+        }
+        return null;
+    }
+
+    public boolean pay(Cookie[] cookies) {
+        if (cookies != null) {
+            for (Cookie cookie : cookies) {
+                if ("sessionID".equals(cookie.getName())) {
+                    String sessionID = cookie.getValue();
+                    WuguAttribute wuguAttribute = new WuguAttribute();
+                    wuguAttribute.setSessionID(sessionID);
+                    wuguAttribute.setKey("userName");
+                    String userName = restTemplate.postForObject("http://localhost:8280/session/getAttribute", wuguAttribute, String.class);
+                    if (userName != null) {
+                        return orderDao.pay(userName);
+                    }
+                }
+            }
+        }
+        return false;
+    }
+
+    public boolean add(Cookie[] cookies, String phoneName) {
+        if (cookies != null) {
+            for (Cookie cookie : cookies) {
+                if ("sessionID".equals(cookie.getName())) {
+                    String sessionID = cookie.getValue();
+                    WuguAttribute wuguAttribute = new WuguAttribute();
+                    wuguAttribute.setSessionID(sessionID);
+                    wuguAttribute.setKey("userName");
+                    String userName = restTemplate.postForObject("http://localhost:8280/session/getAttribute", wuguAttribute, String.class);
+                    if (userName != null) {
+                        return orderDao.add(userName, phoneName);
+                    }
+                }
+            }
+        }
+        return false;
+    }
 }

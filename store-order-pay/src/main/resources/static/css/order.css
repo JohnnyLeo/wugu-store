@@ -42,10 +42,10 @@
     position: relative;
     margin: 0 auto;
     margin-top:50px ;
-    width: 100px;  
+    width: 200px;
 }
 input{
-    display: block;
+    display: inline;
 }
 #pay{
     width: 100px;
