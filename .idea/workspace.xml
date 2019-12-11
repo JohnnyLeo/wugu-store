@@ -1,44 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="1986aff7-b218-45ed-8c4f-908a07bff74f" name="Default Changelist" comment="fix cookie.cross-domain&#10;change url of all">
-      <change afterPath="$PROJECT_DIR$/store-detail/src/main/resources/static/css/animate.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/store-detail/src/main/resources/static/css/blue.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/store-detail/src/main/resources/static/css/bootstrap.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/store-detail/src/main/resources/static/css/brown.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/store-detail/src/main/resources/static/css/green.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/store-detail/src/main/resources/static/css/icomoon.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/store-detail/src/main/resources/static/css/lightblue.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/store-detail/src/main/resources/static/css/magnific-popup.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/store-detail/src/main/resources/static/css/main.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/store-detail/src/main/resources/static/css/orange.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/store-detail/src/main/resources/static/css/owl.carousel.min.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/store-detail/src/main/resources/static/css/owl.theme.default.min.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/store-detail/src/main/resources/static/css/pink.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/store-detail/src/main/resources/static/css/simple-line-icons.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/store-detail/src/main/resources/static/css/turquoise.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/store-detail/src/main/resources/static/fonts/simple-line-icons/Simple-Line-Icons.eot" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/store-detail/src/main/resources/static/fonts/simple-line-icons/Simple-Line-Icons.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/store-detail/src/main/resources/static/fonts/simple-line-icons/Simple-Line-Icons.ttf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/store-detail/src/main/resources/static/fonts/simple-line-icons/Simple-Line-Icons.woff" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/store-detail/src/main/resources/static/fonts/simple-line-icons/Simple-Line-Icons.woff2" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/store-detail/src/main/resources/static/images/img_1.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/store-detail/src/main/resources/static/images/img_10.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/store-detail/src/main/resources/static/images/img_7.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/store-detail/src/main/resources/static/images/img_8.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/store-detail/src/main/resources/static/images/img_9.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/store-detail/src/main/resources/static/images/iphone-1.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/store-detail/src/main/resources/static/images/iphone-2.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/store-detail/src/main/resources/static/images/iphone-3.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/store-detail/src/main/resources/static/images/logo.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/store-detail/src/main/resources/static/images/person2.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/store-detail/src/main/resources/static/images/person3.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/store-detail/src/main/resources/static/images/person4.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/store-detail/src/main/resources/static/images/slide_5.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/store-detail/src/main/resources/static/images/wg.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/store-order-pay/src/main/java/com.wugu.store/web/OrderController.java" afterDir="false" />
+    <list default="true" id="1986aff7-b218-45ed-8c4f-908a07bff74f" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/store-detail/src/main/resources/static/NuoMiZ20.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/store-detail/src/main/resources/static/js/ajaxUtil.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/store-order-pay/src/main/java/com.wugu.store/dao/PhoneDao.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/wugu/store/domain/Message.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/wugu/store/domain/Message.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/store-detail/src/main/resources/static/CaoMiPro.html" beforeDir="false" afterPath="$PROJECT_DIR$/store-detail/src/main/resources/static/CaoMiPro.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/store-detail/src/main/resources/static/DaDouPro.html" beforeDir="false" afterPath="$PROJECT_DIR$/store-detail/src/main/resources/static/DaDouPro.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/store-detail/src/main/resources/static/DaMiAlpha.html" beforeDir="false" afterPath="$PROJECT_DIR$/store-detail/src/main/resources/static/DaMiAlpha.html" afterDir="false" />
@@ -49,45 +16,14 @@
       <change beforePath="$PROJECT_DIR$/store-detail/src/main/resources/static/XiaoMaiMate.html" beforeDir="false" afterPath="$PROJECT_DIR$/store-detail/src/main/resources/static/XiaoMaiMate.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/store-detail/src/main/resources/static/YanMaiX11.html" beforeDir="false" afterPath="$PROJECT_DIR$/store-detail/src/main/resources/static/YanMaiX11.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/store-detail/src/main/resources/static/YuMiPlus.html" beforeDir="false" afterPath="$PROJECT_DIR$/store-detail/src/main/resources/static/YuMiPlus.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/store-detail/src/main/resources/static/css/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/store-detail/src/main/resources/static/css/style.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/store-detail/src/main/resources/static/css/style.css.map" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/store-detail/src/main/resources/static/fonts/bootstrap/index.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/store-detail/src/main/resources/static/fonts/icomoon/icomoon.eot" beforeDir="false" afterPath="$PROJECT_DIR$/store-detail/src/main/resources/static/fonts/icomoon/icomoon.eot" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/store-detail/src/main/resources/static/fonts/icomoon/icomoon.svg" beforeDir="false" afterPath="$PROJECT_DIR$/store-detail/src/main/resources/static/fonts/icomoon/icomoon.svg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/store-detail/src/main/resources/static/fonts/icomoon/icomoon.ttf" beforeDir="false" afterPath="$PROJECT_DIR$/store-detail/src/main/resources/static/fonts/icomoon/icomoon.ttf" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/store-detail/src/main/resources/static/fonts/icomoon/icomoon.woff" beforeDir="false" afterPath="$PROJECT_DIR$/store-detail/src/main/resources/static/fonts/icomoon/icomoon.woff" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/store-detail/src/main/resources/static/fonts/icomoon/icomoon/demo-files/demo.css" beforeDir="false" afterPath="$PROJECT_DIR$/store-detail/src/main/resources/static/fonts/icomoon/icomoon/demo-files/demo.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/store-detail/src/main/resources/static/fonts/icomoon/icomoon/demo.html" beforeDir="false" afterPath="$PROJECT_DIR$/store-detail/src/main/resources/static/fonts/icomoon/icomoon/demo.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/store-detail/src/main/resources/static/fonts/icomoon/icomoon/fonts/icomoon.eot" beforeDir="false" afterPath="$PROJECT_DIR$/store-detail/src/main/resources/static/fonts/icomoon/icomoon/fonts/icomoon.eot" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/store-detail/src/main/resources/static/fonts/icomoon/icomoon/fonts/icomoon.svg" beforeDir="false" afterPath="$PROJECT_DIR$/store-detail/src/main/resources/static/fonts/icomoon/icomoon/fonts/icomoon.svg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/store-detail/src/main/resources/static/fonts/icomoon/icomoon/fonts/icomoon.ttf" beforeDir="false" afterPath="$PROJECT_DIR$/store-detail/src/main/resources/static/fonts/icomoon/icomoon/fonts/icomoon.ttf" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/store-detail/src/main/resources/static/fonts/icomoon/icomoon/fonts/icomoon.woff" beforeDir="false" afterPath="$PROJECT_DIR$/store-detail/src/main/resources/static/fonts/icomoon/icomoon/fonts/icomoon.woff" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/store-detail/src/main/resources/static/fonts/icomoon/icomoon/selection.json" beforeDir="false" afterPath="$PROJECT_DIR$/store-detail/src/main/resources/static/fonts/icomoon/icomoon/selection.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/store-detail/src/main/resources/static/fonts/icomoon/icomoon/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/store-detail/src/main/resources/static/fonts/icomoon/icomoon/style.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/store-detail/src/main/resources/static/fonts/icomoon/index.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/store-detail/src/main/resources/static/fonts/index.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/store-detail/target/classes/com/wugu/store/web/LoginController.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/store-login-register/src/main/java/com/wugu/store/web/LoginController.java" beforeDir="false" afterPath="$PROJECT_DIR$/store-login-register/src/main/java/com/wugu/store/web/LoginController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/store-login-register/target/classes/com/wugu/store/web/LoginController.class" beforeDir="false" afterPath="$PROJECT_DIR$/store-login-register/target/classes/com/wugu/store/web/LoginController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/store-login-register/src/main/resources/static/login.html" beforeDir="false" afterPath="$PROJECT_DIR$/store-login-register/src/main/resources/static/login.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/store-main/src/main/resources/static/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/store-main/src/main/resources/static/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/store-order-pay/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/store-order-pay/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/store-order-pay/src/main/java/com.wugu.store/OrderPayApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/store-order-pay/src/main/java/com.wugu.store/OrderPayApplication.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/store-order-pay/src/main/java/com.wugu.store/Service/OrderService.java" beforeDir="false" afterPath="$PROJECT_DIR$/store-order-pay/src/main/java/com.wugu.store/Service/OrderService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/store-order-pay/src/main/java/com.wugu.store/dao/OrderDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/store-order-pay/src/main/java/com.wugu.store/dao/OrderDao.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/store-order-pay/src/main/java/com.wugu.store/web/Order_finished.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/store-order-pay/src/main/java/com.wugu.store/web/Order_get.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/store-order-pay/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/store-order-pay/src/main/resources/application.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/store-order-pay/src/main/resources/static/css/order.css" beforeDir="false" afterPath="$PROJECT_DIR$/store-order-pay/src/main/resources/static/css/order.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/store-order-pay/src/main/resources/static/css/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/store-order-pay/src/main/resources/static/css/style.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/store-order-pay/src/main/java/com.wugu.store/web/OrderController.java" beforeDir="false" afterPath="$PROJECT_DIR$/store-order-pay/src/main/java/com.wugu.store/web/OrderController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/store-order-pay/src/main/resources/static/order.html" beforeDir="false" afterPath="$PROJECT_DIR$/store-order-pay/src/main/resources/static/order.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/store-session/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/store-session/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/store-shoppingCart/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/store-shoppingCart/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/store-shoppingCart/src/main/java/com.wugu.store/ShoppingCartApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/store-shoppingCart/src/main/java/com.wugu.store/ShoppingCartApplication.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/store-shoppingCart/src/main/java/com.wugu.store/dao/CartDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/store-shoppingCart/src/main/java/com.wugu.store/dao/CartDao.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/store-shoppingCart/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/store-shoppingCart/src/main/resources/application.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/store-zuul/src/main/java/com/wugu/store/ZuulApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/store-zuul/src/main/java/com/wugu/store/ZuulApplication.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/store-zuul/src/main/java/com/wugu/store/filter/LoginFilter.java" beforeDir="false" afterPath="$PROJECT_DIR$/store-zuul/src/main/java/com/wugu/store/filter/LoginFilter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/store-zuul/target/classes/com/wugu/store/ZuulApplication.class" beforeDir="false" afterPath="$PROJECT_DIR$/store-zuul/target/classes/com/wugu/store/ZuulApplication.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/store-shoppingCart/src/main/java/com.wugu.store/dao/PhoneDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/store-shoppingCart/src/main/java/com.wugu.store/dao/PhoneDao.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/store-shoppingCart/src/main/resources/static/pricing.html" beforeDir="false" afterPath="$PROJECT_DIR$/store-shoppingCart/src/main/resources/static/index.html" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -199,7 +135,7 @@
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/store-detail/src/main/resources/static/css" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/store-detail/src/main/resources/static/js" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="project.structure.last.edited" value="Modules" />
@@ -215,14 +151,15 @@
       <recent name="com.wugu.store.web" />
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="com.wugu.store.dao" />
       <recent name="com.wugu.store.web" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\IDEA\java web\wugustore\store-detail\src\main\resources\static\js" />
       <recent name="D:\IDEA\java web\wugustore\store-detail\src\main\resources\static\css" />
       <recent name="D:\IDEA\java web\wugustore\store-detail\src\main\resources\static\images" />
       <recent name="D:\IDEA\java web\wugustore\store-detail\src\main\resources\static" />
       <recent name="D:\IDEA\java web\wugustore\store-login-register\src\main\resources\static\js" />
-      <recent name="D:\IDEA\java web\wugustore\store-login-register\src\main\resources\static\css" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -237,7 +174,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Spring Boot.Detail">
+  <component name="RunManager" selected="Spring Boot.ShoppingCart">
     <configuration name="Detail" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
       <module name="store-detail" />
       <option name="SPRING_BOOT_MAIN_CLASS" value="com.wugu.store.DetailApplication" />
@@ -282,6 +219,14 @@
     <configuration name="Session" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
       <module name="store-session" />
       <option name="SPRING_BOOT_MAIN_CLASS" value="com.wugu.store.SessionApplication" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ShoppingCart" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+      <module name="store-shoppingCart" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.wugu.store.ShoppingCartApplication" />
       <option name="ALTERNATIVE_JRE_PATH" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -362,6 +307,7 @@
       <item itemvalue="Spring Boot.Detail" />
       <item itemvalue="Spring Boot.Session" />
       <item itemvalue="Spring Boot.Login-Register" />
+      <item itemvalue="Spring Boot.ShoppingCart" />
       <item itemvalue="Spring Boot.Zuul" />
       <item itemvalue="Spring Boot.Main" />
       <item itemvalue="Spring Boot.Eureka" />
@@ -374,12 +320,12 @@
           <expand>
             <path>
               <item name="services root" type="e789fda9:ObjectUtils$Sentinel" />
-              <item name="com.intellij.execution.services.ServiceModel$ServiceGroupNode@852be653" type="7427dc5b:ServiceModel$ServiceGroupNode" />
+              <item name="com.intellij.execution.services.ServiceModel$ServiceGroupNode@196d16b9" type="7427dc5b:ServiceModel$ServiceGroupNode" />
             </path>
             <path>
               <item name="services root" type="e789fda9:ObjectUtils$Sentinel" />
-              <item name="com.intellij.execution.services.ServiceModel$ServiceGroupNode@852be653" type="7427dc5b:ServiceModel$ServiceGroupNode" />
-              <item name="com.intellij.execution.services.ServiceModel$ServiceNode@1a0817b6" type="9fbbdea:ServiceModel$ServiceNode" />
+              <item name="com.intellij.execution.services.ServiceModel$ServiceGroupNode@196d16b9" type="7427dc5b:ServiceModel$ServiceGroupNode" />
+              <item name="com.intellij.execution.services.ServiceModel$ServiceNode@2b9b7640" type="9fbbdea:ServiceModel$ServiceNode" />
             </path>
           </expand>
           <select />
@@ -427,7 +373,9 @@
       <workItem from="1575871572009" duration="2763000" />
       <workItem from="1575880489383" duration="2025000" />
       <workItem from="1575904105133" duration="3103000" />
-      <workItem from="1575959885642" duration="21700000" />
+      <workItem from="1575959885642" duration="21831000" />
+      <workItem from="1576026147059" duration="7222000" />
+      <workItem from="1576054801303" duration="268000" />
     </task>
     <task id="LOCAL-00001" summary="add session;login-register">
       <created>1574670885658</created>
@@ -541,7 +489,14 @@
       <option name="project" value="LOCAL" />
       <updated>1575907146139</updated>
     </task>
-    <option name="localTasksCounter" value="17" />
+    <task id="LOCAL-00017" summary="fix cookie.cross-domain&#10;change url of all">
+      <created>1575988362612</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1575988362612</updated>
+    </task>
+    <option name="localTasksCounter" value="18" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">

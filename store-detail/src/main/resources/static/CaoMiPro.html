@@ -78,8 +78,8 @@
 		<div class="row row-padded">
 			<div class="col-md-12 text-center">
 			<div class="form-group">
-				<a href="#" class="btn btn-primary">立即购买</a>
-				<a href="#" class="btn btn-primary">加入购物车</a>
+				<button class="btn btn-primary" id="buy">立即购买</button>
+				<button class="btn btn-primary" id="add">加入购物车</button>
 			</div>
 			</div>
 		</div>
@@ -98,4 +98,42 @@
 	</footer>
 
 	</body>
+
+	<script src="js/ajaxUtil.js"></script>
+	<script type="text/javascript">
+		document.getElementById("add").onclick = function() {
+			ajax({
+				method: HTTP_METHOD.POST,
+				url: "http://localhost/shoppingCart/cart/add",
+				async: true,
+				params: "phoneName=CaoMiPro",
+				type: HTTP_RESPONSE_TYPE.TEXT,
+				callback: function(data) {
+					if (data.toString() == "true") {
+						alert("成功加入购物车！");
+					} else {
+						alert("加入购物车失败！请先登录。");
+					}
+				}
+			})
+		}
+
+		document.getElementById("buy").onclick = function() {
+			ajax({
+				method: HTTP_METHOD.POST,
+				url: "http://localhost/order/order/add",
+				async: true,
+				params: "phoneName=CaoMiPro",
+				type: HTTP_RESPONSE_TYPE.TEXT,
+				callback: function(data) {
+					if (data.toString() == "true") {
+						window.open("http://localhost/order/order.html");
+					} else {
+						alert("购买失败！请先登录。");
+					}
+				}
+			})
+		}
+	</script>
+
 </html>

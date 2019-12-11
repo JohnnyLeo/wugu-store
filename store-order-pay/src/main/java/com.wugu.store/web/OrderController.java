@@ -32,7 +32,6 @@ public class OrderController {
         String content = orderService.select(cookies);
         if (content != null) {
             response.setContentType("text/json");
-            System.out.println(content);
             response.getWriter().write(content);
         }
     }

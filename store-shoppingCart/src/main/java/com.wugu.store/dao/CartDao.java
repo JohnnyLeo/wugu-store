@@ -2,6 +2,7 @@ package com.wugu.store.dao;
 
 import com.wugu.store.domain.Message;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.jdbc.core.BeanPropertyRowMapper;
 import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.stereotype.Repository;
 import org.springframework.transaction.annotation.Transactional;
@@ -39,8 +40,13 @@ public class CartDao {
         message.setPhoneName(phoneName);
         message.setPrice(phoneDao.select(phoneName).getPhonePrice());
         message.setNumber(1);
-        message.setState(1);
-        return jdbcTemplate.update(insertMessageSql, message.getMessageID(), message.getUserName(), message.getPhoneName(), message.getState()) == 1;
+        message.setStatus(1);
+        return jdbcTemplate.update(insertMessageSql, message.getMessageID(),
+                message.getUserName(),
+                message.getPhoneName(),
+                message.getPrice(),
+                message.getNumber(),
+                message.getStatus()) == 1;
     }
 
     @Transactional
@@ -49,6 +55,6 @@ public class CartDao {
     }
 
     public List<Message> select(String userName) {
-        return jdbcTemplate.queryForList(selectMessageSql, new Object[]{userName}, Message.class);
+        return jdbcTemplate.query(selectMessageSql, new Object[]{userName}, new BeanPropertyRowMapper<>(Message.class));
     }
 }
