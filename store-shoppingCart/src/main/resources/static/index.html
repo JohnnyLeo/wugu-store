@@ -39,22 +39,14 @@
 	<meta name="twitter:card" content="" />
 
 	<!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
-	<link rel="shortcut icon" href="favicon.ico">
-
-	<!-- Google Webfonts -->
-	<link href='http://fonts.googleapis.com/css?family=Roboto:400,300,100,500' rel='stylesheet' type='text/css'>
-	<link href='https://fonts.googleapis.com/css?family=Montserrat:400,700' rel='stylesheet' type='text/css'>
-	
-	<!-- Animate.css -->
-	<link rel="stylesheet" href="css/animate.css">
-	<!-- Icomoon Icon Fonts-->
 	<link rel="stylesheet" href="css/icomoon.css">
-	<!-- Magnific Popup -->
-	<link rel="stylesheet" href="css/magnific-popup.css">
-	<!-- Salvattore -->
-	<link rel="stylesheet" href="css/salvattore.css">
-	<!-- Theme Style -->
-	<link rel="stylesheet" href="css/style.css">
+	
+		<!-- Bootstrap  -->
+		<link rel="stylesheet" href="css/bootstrap.css">
+		<link rel="stylesheet" type="text/css" href="css/main.css"/>
+	
+		<!-- Styleswitcher ( This style is for demo purposes only, you may delete this anytime. ) -->
+		<link rel="stylesheet" id="theme-switch" href="css/style.css">
 	<!-- Modernizr JS -->
 	<script src="js/modernizr-2.6.2.min.js"></script>
 	<!-- FOR IE9 below -->
@@ -65,32 +57,34 @@
 	</head>
 	<body>
 		
-	<div id="fh5co-offcanvass">
-		<a href="#" class="fh5co-offcanvass-close js-fh5co-offcanvass-close">Menu <i class="icon-cross"></i> </a>
-		<h1 class="fh5co-logo"><a class="navbar-brand" href="index.html">Hydrogen</a></h1>
-		<ul>
-			<li><a href="index.html">Home</a></li>
-			<li><a href="about.html">About</a></li>
-			<li class="active"><a href="index.html">Pricing</a></li>
-			<li><a href="contact.html">Contact</a></li>
-		</ul>
-		<h3 class="fh5co-lead">Connect with us</h3>
-		<p class="fh5co-social-icons">
-			<a href="#"><i class="icon-twitter"></i></a>
-			<a href="#"><i class="icon-facebook"></i></a>
-			<a href="#"><i class="icon-instagram"></i></a>
-			<a href="#"><i class="icon-dribbble"></i></a>
-			<a href="#"><i class="icon-youtube"></i></a>
-		</p>
-	</div>
-	<header id="fh5co-header" role="banner">
+	<header role="banner" id="fh5co-header">
 		<div class="container">
-			<div class="row">
-				<div class="col-md-12">
-					<a href="#" class="fh5co-menu-btn js-fh5co-menu-btn">Menu <i class="icon-menu"></i></a>
-					<a class="navbar-brand" href="index.html">Hydrogen</a>
+			<!-- <div class="row"> -->
+			<nav class="navbar navbar-default">
+				<div class="navbar-header">
+					<!-- Mobile Toggle Menu Button -->
+					<a class="nav-img" href="#"><img  src="./images/wg.jpg" width="60px" height="60px"/></a>
+					<a href="#" class="js-fh5co-nav-toggle fh5co-nav-toggle" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar"><i></i></a>
+					<a class="navbar-brand" href="index.html" style="margin-left: 20px;">五谷商城</a>
 				</div>
-			</div>
+				<div class="nav-search">
+					<input type="text" class="search-bar" placeholder="大米 MIX Alpha">
+				</div>
+				<div id="navbar" class="navbar-collapse collapse">
+					<ul class="nav navbar-nav navbar-right">
+						<li class="active"><a href="http://localhost/main/index.html" ><span>首页</span></a></li>
+						<li><a href="http://localhost/cart/index.html" target="_blank"><span>购物车</span></a></li>
+						<li><a href="http://localhost/order/order.html" target="_blank"><span>我的订单</span></a></li>
+						<li><a href="./order/pay.html" target="_blank"><span>已购买</span></a></li>
+					</ul>
+					<ul class="login-register">
+						<li><a href="http://localhost/loginRegister/login.html" target="_blank">登录</a> &#47; </li>
+						<li><a href="http://localhost/loginRegister/login.html" target="_blank">注册</a></li>
+					</ul>
+				</div>
+	
+			</nav>
+			<!-- </div> -->
 		</div>
 	</header>
 	<!-- END .header -->
@@ -100,70 +94,50 @@
 		<div class="container">
 			<div class="row">
 				<div class="col-md-8 col-md-offset-2">
-					<h2>Pricing</h2>
 					<div class="fh5co-spacer fh5co-spacer-sm"></div>
 					<div class="row">
+						<!-- 此处开始拼接 -->
 						<div class="col-md-4">
 							<div class="fh5co-pricing-table">
-								<h3>Starter</h3>
+								<h3>phoneName</h3>
 								<ul class="fh5co-list-check">
-									<li class="fh5co-include">5 users</li>
-									<li class="fh5co-include">10 projects</li>
-									<li>10GB amount of space</li>
-									<li>5 e-mail accounts</li>
+									<li class="fh5co-include">price</li>
+									<li class="fh5co-include">number</li>
+									<li>orderID</li>
 								</ul>
-								<a href="#" class="btn btn-block btn-sm btn-outline">Sign up</a>
+								<button class="btn btn-warning" id="clear">删除</button>
+								<button class="btn btn-success" id="buy">购买</button>
 							</div>
 						</div>
-						<div class="col-md-4">
-							<div class="fh5co-pricing-table">
-								<h3>Basic</h3>
-								<ul class="fh5co-list-check">
-									<li class="fh5co-include">5 users</li>
-									<li class="fh5co-include">10 projects</li>
-									<li class="fh5co-include">10GB amount of space</li>
-									<li>5 e-mail accounts</li>
-								</ul>
-								<a href="#" class="btn btn-block btn-sm btn-primary">Sign up</a>
-							</div>
-						</div>
-						<div class="col-md-4">
-							<div class="fh5co-pricing-table">
-								<h3>Pro</h3>
-								<ul class="fh5co-list-check">
-									<li class="fh5co-include">5 users</li>
-									<li class="fh5co-include">10 projects</li>
-									<li class="fh5co-include">10GB amount of space</li>
-									<li class="fh5co-include">5 e-mail accounts</li>
-								</ul>
-								<a href="#" class="btn btn-block btn-sm btn-outline">Sign up</a>
-							</div>
-						</div>
+						<!-- end -->
 					</div>
-					
 				</div>
-        		
         	</div>
        </div>
 	</div>
 
-	<footer id="fh5co-footer">
-		
-		<div class="container">
-			<div class="row row-padded">
-				<div class="col-md-12 text-center">
-					<p class="fh5co-social-icons">
-						<a href="#"><i class="icon-twitter"></i></a>
-						<a href="#"><i class="icon-facebook"></i></a>
-						<a href="#"><i class="icon-instagram"></i></a>
-						<a href="#"><i class="icon-dribbble"></i></a>
-						<a href="#"><i class="icon-youtube"></i></a>
-					</p>
-					<p><small>&copy; Hydrogen Free HTML5 Template. All Rights Reserved. <br>Designed by: <a href="http://freehtml5.co/" target="_blank">FREEHTML5.co</a> | Images by: <a href="http://pexels.com" target="_blank">Pexels</a> </small></p>
+	<footer id="footer" role="contentinfo">
+			<div class="container">
+				<div class="row row-bottom-padded-sm">
+					<div class="col-md-12">
+						<p class="copyright text-center">&copy; <a href="index.html"> 2019 五谷科技有限责任公司</a> <br> 公司邮箱&#58;wugustudio@wugu.com| 海海手机&nbsp;海海选择！</p>
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-md-12 text-center">
+						<ul class="row-footer">
+							<li><a href="#">关于我们</i></a></li>
+							<li><a href="#">联系我们</i></a></li>
+							<li><a href="#">加入我们</i></a></li>
+							<li><a href="#">帮助中心</i></a></li>
+							<li><a href="#">活动中心</i></a></li>
+							<li><a href="#">用户反馈</i></a></li>
+							<li><a href="#">侵权申诉</i></a></li>
+						</ul>
+					</div>
 				</div>
 			</div>
-		</div>
-	</footer>
+		</footer>
 
 
 	<!-- jQuery -->
