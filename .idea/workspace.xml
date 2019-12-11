@@ -3,27 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="1986aff7-b218-45ed-8c4f-908a07bff74f" name="Default Changelist" comment="">
       <change afterPath="$PROJECT_DIR$/store-detail/src/main/resources/static/NuoMiZ20.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/store-detail/src/main/resources/static/js/ajaxUtil.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/store-order-pay/src/main/java/com.wugu.store/dao/PhoneDao.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/store-detail/src/main/resources/static/CaoMiPro.html" beforeDir="false" afterPath="$PROJECT_DIR$/store-detail/src/main/resources/static/CaoMiPro.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/store-detail/src/main/resources/static/DaDouPro.html" beforeDir="false" afterPath="$PROJECT_DIR$/store-detail/src/main/resources/static/DaDouPro.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/store-detail/src/main/resources/static/DaMiAlpha.html" beforeDir="false" afterPath="$PROJECT_DIR$/store-detail/src/main/resources/static/DaMiAlpha.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/store-detail/src/main/resources/static/HeiMiMix.html" beforeDir="false" afterPath="$PROJECT_DIR$/store-detail/src/main/resources/static/HeiMiMix.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/store-detail/src/main/resources/static/HongShuFind.html" beforeDir="false" afterPath="$PROJECT_DIR$/store-detail/src/main/resources/static/HongShuFind.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/store-detail/src/main/resources/static/MaLingShuNex.html" beforeDir="false" afterPath="$PROJECT_DIR$/store-detail/src/main/resources/static/MaLingShuNex.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/store-detail/src/main/resources/static/NuoMIZ20.html" beforeDir="false" afterPath="$PROJECT_DIR$/store-detail/src/main/resources/static/NuoMIZ20.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/store-detail/src/main/resources/static/XiaoMaiMate.html" beforeDir="false" afterPath="$PROJECT_DIR$/store-detail/src/main/resources/static/XiaoMaiMate.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/store-detail/src/main/resources/static/YanMaiX11.html" beforeDir="false" afterPath="$PROJECT_DIR$/store-detail/src/main/resources/static/YanMaiX11.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/store-detail/src/main/resources/static/YuMiPlus.html" beforeDir="false" afterPath="$PROJECT_DIR$/store-detail/src/main/resources/static/YuMiPlus.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/store-login-register/src/main/resources/static/login.html" beforeDir="false" afterPath="$PROJECT_DIR$/store-login-register/src/main/resources/static/login.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/store-main/src/main/resources/static/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/store-main/src/main/resources/static/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/store-order-pay/src/main/java/com.wugu.store/dao/OrderDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/store-order-pay/src/main/java/com.wugu.store/dao/OrderDao.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/store-order-pay/src/main/java/com.wugu.store/web/OrderController.java" beforeDir="false" afterPath="$PROJECT_DIR$/store-order-pay/src/main/java/com.wugu.store/web/OrderController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/store-order-pay/src/main/resources/static/order.html" beforeDir="false" afterPath="$PROJECT_DIR$/store-order-pay/src/main/resources/static/order.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/store-shoppingCart/src/main/java/com.wugu.store/dao/CartDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/store-shoppingCart/src/main/java/com.wugu.store/dao/CartDao.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/store-shoppingCart/src/main/java/com.wugu.store/dao/PhoneDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/store-shoppingCart/src/main/java/com.wugu.store/dao/PhoneDao.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/store-shoppingCart/src/main/resources/static/pricing.html" beforeDir="false" afterPath="$PROJECT_DIR$/store-shoppingCart/src/main/resources/static/index.html" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -375,7 +354,7 @@
       <workItem from="1575904105133" duration="3103000" />
       <workItem from="1575959885642" duration="21831000" />
       <workItem from="1576026147059" duration="7222000" />
-      <workItem from="1576054801303" duration="268000" />
+      <workItem from="1576054801303" duration="397000" />
     </task>
     <task id="LOCAL-00001" summary="add session;login-register">
       <created>1574670885658</created>
@@ -496,7 +475,14 @@
       <option name="project" value="LOCAL" />
       <updated>1575988362612</updated>
     </task>
-    <option name="localTasksCounter" value="18" />
+    <task id="LOCAL-00018" summary="fix bug">
+      <created>1576055126257</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1576055126257</updated>
+    </task>
+    <option name="localTasksCounter" value="19" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -534,6 +520,7 @@
     <MESSAGE value="add /register" />
     <MESSAGE value="add /cart/select; &#10;add /cart/delete; &#10;add /cart/add;" />
     <MESSAGE value="fix cookie.cross-domain&#10;change url of all" />
-    <option name="LAST_COMMIT_MESSAGE" value="fix cookie.cross-domain&#10;change url of all" />
+    <MESSAGE value="fix bug" />
+    <option name="LAST_COMMIT_MESSAGE" value="fix bug" />
   </component>
 </project>
