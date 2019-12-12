@@ -47,6 +47,11 @@ public class CartController {
     public void select(HttpServletRequest request, HttpServletResponse response) throws IOException {
         Cookie[] cookies = request.getCookies();
         response.setContentType("text/json");
-        response.getWriter().write(cartService.select(cookies));
+        String content = cartService.select(cookies);
+        if (content != null) {
+            response.getWriter().write(cartService.select(cookies));
+        } else {
+            response.getWriter().write("");
+        }
     }
 }
