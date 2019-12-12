@@ -16,6 +16,7 @@ public class OrderDao {
     private final static String selectOrderSql = "select * from message where message.username = ? and message.status = 2";
     private final static String payOrderSql = "update message set status = 3 where username = ? and status = 2";
     private final static String addOrderSql = "insert into message values (?, ?, ?, ?, ?, ?)";
+    private final static String createOrderSql = "update message set status = 2 where messageid = ?";
 
     private JdbcTemplate jdbcTemplate;
     private PhoneDao phoneDao;
@@ -36,6 +37,11 @@ public class OrderDao {
 
     public boolean pay(String userName) {
         return jdbcTemplate.update(payOrderSql, userName) != 0;
+    }
+
+    public boolean createOrder(String messageID) {
+        System.out.println(messageID);
+        return jdbcTemplate.update(createOrderSql, messageID) == 1;
     }
 
     public boolean add(String userName, String phoneName) {

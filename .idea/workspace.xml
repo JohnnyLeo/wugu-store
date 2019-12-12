@@ -2,7 +2,30 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="1986aff7-b218-45ed-8c4f-908a07bff74f" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/store-detail/src/main/resources/static/NuoMiZ20.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/store-main/src/main/resources/static/js/ajaxUtil.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/store-shoppingCart/src/main/resources/static/js/ajaxUtil.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/store-shoppingCart/src/main/resources/static/js/jquery-1.12.4.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/store-detail/src/main/resources/static/CaoMiPro.html" beforeDir="false" afterPath="$PROJECT_DIR$/store-detail/src/main/resources/static/CaoMiPro.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/store-detail/src/main/resources/static/DaDouPro.html" beforeDir="false" afterPath="$PROJECT_DIR$/store-detail/src/main/resources/static/DaDouPro.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/store-detail/src/main/resources/static/DaMiAlpha.html" beforeDir="false" afterPath="$PROJECT_DIR$/store-detail/src/main/resources/static/DaMiAlpha.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/store-detail/src/main/resources/static/HeiMiMix.html" beforeDir="false" afterPath="$PROJECT_DIR$/store-detail/src/main/resources/static/HeiMiMix.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/store-detail/src/main/resources/static/HongShuFind.html" beforeDir="false" afterPath="$PROJECT_DIR$/store-detail/src/main/resources/static/HongShuFind.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/store-detail/src/main/resources/static/MaLingShuNex.html" beforeDir="false" afterPath="$PROJECT_DIR$/store-detail/src/main/resources/static/MaLingShuNex.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/store-detail/src/main/resources/static/NuoMIZ20.html" beforeDir="false" afterPath="$PROJECT_DIR$/store-detail/src/main/resources/static/NuoMIZ20.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/store-detail/src/main/resources/static/XiaoMaiMate.html" beforeDir="false" afterPath="$PROJECT_DIR$/store-detail/src/main/resources/static/XiaoMaiMate.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/store-detail/src/main/resources/static/YanMaiX11.html" beforeDir="false" afterPath="$PROJECT_DIR$/store-detail/src/main/resources/static/YanMaiX11.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/store-detail/src/main/resources/static/YuMiPlus.html" beforeDir="false" afterPath="$PROJECT_DIR$/store-detail/src/main/resources/static/YuMiPlus.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/store-login-register/src/main/java/com/wugu/store/web/LoginController.java" beforeDir="false" afterPath="$PROJECT_DIR$/store-login-register/src/main/java/com/wugu/store/web/LoginController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/store-login-register/src/main/resources/static/login.html" beforeDir="false" afterPath="$PROJECT_DIR$/store-login-register/src/main/resources/static/login.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/store-login-register/target/classes/com/wugu/store/web/LoginController.class" beforeDir="false" afterPath="$PROJECT_DIR$/store-login-register/target/classes/com/wugu/store/web/LoginController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/store-main/src/main/resources/static/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/store-main/src/main/resources/static/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/store-order-pay/src/main/java/com.wugu.store/Service/OrderService.java" beforeDir="false" afterPath="$PROJECT_DIR$/store-order-pay/src/main/java/com.wugu.store/Service/OrderService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/store-order-pay/src/main/java/com.wugu.store/dao/OrderDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/store-order-pay/src/main/java/com.wugu.store/dao/OrderDao.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/store-order-pay/src/main/java/com.wugu.store/web/OrderController.java" beforeDir="false" afterPath="$PROJECT_DIR$/store-order-pay/src/main/java/com.wugu.store/web/OrderController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/store-order-pay/src/main/resources/static/order.html" beforeDir="false" afterPath="$PROJECT_DIR$/store-order-pay/src/main/resources/static/order.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/store-shoppingCart/src/main/java/com.wugu.store/web/CartController.java" beforeDir="false" afterPath="$PROJECT_DIR$/store-shoppingCart/src/main/java/com.wugu.store/web/CartController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/store-shoppingCart/src/main/resources/static/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/store-shoppingCart/src/main/resources/static/index.html" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -112,9 +135,10 @@
     <property name="RequestMappingsPanelWidth1" value="75" />
     <property name="RequestMappingsPanelWidth2" value="75" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
+    <property name="TODO_SCOPE" value="All Places" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/store-detail/src/main/resources/static/js" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/store-shoppingCart/src/main/resources/static/js" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="project.structure.last.edited" value="Modules" />
@@ -134,11 +158,11 @@
       <recent name="com.wugu.store.web" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\IDEA\java web\wugustore\store-shoppingCart\src\main\resources\static\js" />
+      <recent name="D:\IDEA\java web\wugustore\store-main\src\main\resources\static\js" />
       <recent name="D:\IDEA\java web\wugustore\store-detail\src\main\resources\static\js" />
       <recent name="D:\IDEA\java web\wugustore\store-detail\src\main\resources\static\css" />
       <recent name="D:\IDEA\java web\wugustore\store-detail\src\main\resources\static\images" />
-      <recent name="D:\IDEA\java web\wugustore\store-detail\src\main\resources\static" />
-      <recent name="D:\IDEA\java web\wugustore\store-login-register\src\main\resources\static\js" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -153,7 +177,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Spring Boot.ShoppingCart">
+  <component name="RunManager" selected="Spring Boot.Order-Pay">
     <configuration name="Detail" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
       <module name="store-detail" />
       <option name="SPRING_BOOT_MAIN_CLASS" value="com.wugu.store.DetailApplication" />
@@ -299,12 +323,12 @@
           <expand>
             <path>
               <item name="services root" type="e789fda9:ObjectUtils$Sentinel" />
-              <item name="com.intellij.execution.services.ServiceModel$ServiceGroupNode@196d16b9" type="7427dc5b:ServiceModel$ServiceGroupNode" />
+              <item name="com.intellij.execution.services.ServiceModel$ServiceGroupNode@c82a810e" type="7427dc5b:ServiceModel$ServiceGroupNode" />
             </path>
             <path>
               <item name="services root" type="e789fda9:ObjectUtils$Sentinel" />
-              <item name="com.intellij.execution.services.ServiceModel$ServiceGroupNode@196d16b9" type="7427dc5b:ServiceModel$ServiceGroupNode" />
-              <item name="com.intellij.execution.services.ServiceModel$ServiceNode@2b9b7640" type="9fbbdea:ServiceModel$ServiceNode" />
+              <item name="com.intellij.execution.services.ServiceModel$ServiceGroupNode@c82a810e" type="7427dc5b:ServiceModel$ServiceGroupNode" />
+              <item name="com.intellij.execution.services.ServiceModel$ServiceNode@3c7c16f" type="9fbbdea:ServiceModel$ServiceNode" />
             </path>
           </expand>
           <select />
@@ -355,6 +379,10 @@
       <workItem from="1575959885642" duration="21831000" />
       <workItem from="1576026147059" duration="7222000" />
       <workItem from="1576054801303" duration="397000" />
+      <workItem from="1576059545367" duration="753000" />
+      <workItem from="1576069200593" duration="7052000" />
+      <workItem from="1576113323367" duration="3097000" />
+      <workItem from="1576120924150" duration="8205000" />
     </task>
     <task id="LOCAL-00001" summary="add session;login-register">
       <created>1574670885658</created>
@@ -482,7 +510,21 @@
       <option name="project" value="LOCAL" />
       <updated>1576055126257</updated>
     </task>
-    <option name="localTasksCounter" value="19" />
+    <task id="LOCAL-00019" summary="fix bug">
+      <created>1576059661612</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1576059661612</updated>
+    </task>
+    <task id="LOCAL-00020" summary="fix bug">
+      <created>1576059699892</created>
+      <option name="number" value="00020" />
+      <option name="presentableId" value="LOCAL-00020" />
+      <option name="project" value="LOCAL" />
+      <updated>1576059699892</updated>
+    </task>
+    <option name="localTasksCounter" value="21" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">

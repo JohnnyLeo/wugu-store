@@ -32,9 +32,30 @@ public class LoginController {
         this.restTemplate = restTemplate;
     }
 
-    @RequestMapping(value = "/isLogin")
-    public boolean isLogin(@RequestBody String sessionID) {
-        return restTemplate.postForObject("http://localhost:8280/session/selectSession", sessionID, Boolean.class);
+    @RequestMapping(value = "/getLogin")
+    public String getLogin(@RequestBody String sessionID) {
+        WuguAttribute wuguAttribute = new WuguAttribute();
+        wuguAttribute.setSessionID(sessionID);
+        wuguAttribute.setKey("userName");
+        String userName = restTemplate.postForObject("http://localhost:8280/session/getAttribute", wuguAttribute, String.class);
+        if (userName != null) {
+            return userName;
+        }
+        return null;
+    }
+
+    @RequestMapping(value = "/getUserName")
+    public String getUserName(HttpServletRequest request) {
+        Cookie[] cookies = request.getCookies();
+        if (cookies != null) {
+            for (Cookie cookie : cookies) {
+                if ("sessionID".equals(cookie.getName())) {
+                    String sessionID = cookie.getValue();
+                    return getLogin(sessionID);
+                }
+            }
+        }
+        return "";
     }
 
     @RequestMapping(value = "/doLogin")

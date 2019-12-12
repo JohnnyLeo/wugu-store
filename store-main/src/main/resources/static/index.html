@@ -3,7 +3,7 @@
 	<head>
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<title>手机销售系统</title>
+	<title>五谷商城</title>
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<meta name="description" content="Free HTML5 Template by FREEHTML5.CO" />
 	<meta name="keywords" content="大米, 小麦, 手机" />
@@ -46,9 +46,28 @@
 
 	<!-- Modernizr JS -->
 	<script src="js/modernizr-2.6.2.min.js"></script>
-	
+
+    <script src="js/ajaxUtil.js"></script>
+    <script type="text/javascript">
+        window.onload = function() {
+            ajax({
+                method: HTTP_METHOD.GET,
+                url: "http://localhost/loginRegister/login/getUserName",
+                async: true,
+                type: HTTP_RESPONSE_TYPE.TEXT,
+                callback: function(data) {
+                    if (data !== "") {
+                        document.getElementById("userName").innerHTML = data;
+                    }
+                }
+            })
+        }
+    </script>
 
 	</head>
+
+
+
 	<body>
 	<header role="banner" id="fh5co-header">
 			<div class="container">
@@ -66,13 +85,13 @@
 		        <div id="navbar" class="navbar-collapse collapse">
 		          <ul class="nav navbar-nav navbar-right">
 		            <li class="active"><a href="http://localhost/main/index.html" ><span>首页</span></a></li>
-		            <li><a href="http://localhost/cart/index.html" target="_blank"><span>购物车</span></a></li>
-		            <li><a href="http://localhost/order/order.html" target="_blank"><span>我的订单</span></a></li>
-		            <li><a href="./order/pay.html" target="_blank"><span>已购买</span></a></li>
+		            <li><a href="http://localhost/shoppingCart/index.html"><span>购物车</span></a></li>
+		            <li><a href="http://localhost/order/order.html"><span>我的订单</span></a></li>
+		            <li><a href="./order/pay.html"><span>已购买</span></a></li>
 		          </ul>
-		          <ul class="login-register">
-			    		<li><a href="http://localhost/loginRegister/login.html" target="_blank">登录</a> &#47; </li>
-			    		<li><a href="http://localhost/loginRegister/login.html" target="_blank">注册</a></li>
+		          <ul class="login-register" id="userName">
+			    		<li><a href="http://localhost/loginRegister/login.html">登录</a> &#47; </li>
+			    		<li><a href="http://localhost/loginRegister/login.html">注册</a></li>
 			      </ul>
 		        </div>
 		        
@@ -346,4 +365,11 @@
 	<script src="js/main.js"></script>
 
 	</body>
+
+<script>
+	document.getElementById("userName").onclick = function() {
+		location.replace("http://localhost/loginRegister/login.html");
+	}
+</script>
+
 </html>

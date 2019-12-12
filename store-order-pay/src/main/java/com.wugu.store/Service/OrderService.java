@@ -2,7 +2,6 @@ package com.wugu.store.service;
 
 import com.alibaba.fastjson.JSON;
 import com.wugu.store.dao.OrderDao;
-import com.wugu.store.domain.WuguAttribute;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.web.client.RestTemplate;
@@ -30,13 +29,9 @@ public class OrderService {
             for (Cookie cookie : cookies) {
                 if ("sessionID".equals(cookie.getName())) {
                     String sessionID = cookie.getValue();
-                    WuguAttribute wuguAttribute = new WuguAttribute();
-                    wuguAttribute.setSessionID(sessionID);
-                    wuguAttribute.setKey("userName");
-                    String userName = restTemplate.postForObject("http://localhost:8280/session/getAttribute", wuguAttribute, String.class);
+                    String userName = restTemplate.postForObject("http://localhost:8050/login/getLogin", sessionID, String.class);
                     if (userName != null) {
                         return JSON.toJSONString(orderDao.select(userName));
-
                     }
                 }
             }
@@ -49,10 +44,7 @@ public class OrderService {
             for (Cookie cookie : cookies) {
                 if ("sessionID".equals(cookie.getName())) {
                     String sessionID = cookie.getValue();
-                    WuguAttribute wuguAttribute = new WuguAttribute();
-                    wuguAttribute.setSessionID(sessionID);
-                    wuguAttribute.setKey("userName");
-                    String userName = restTemplate.postForObject("http://localhost:8280/session/getAttribute", wuguAttribute, String.class);
+                    String userName = restTemplate.postForObject("http://localhost:8050/login/getLogin", sessionID, String.class);
                     if (userName != null) {
                         return orderDao.pay(userName);
                     }
@@ -67,10 +59,7 @@ public class OrderService {
             for (Cookie cookie : cookies) {
                 if ("sessionID".equals(cookie.getName())) {
                     String sessionID = cookie.getValue();
-                    WuguAttribute wuguAttribute = new WuguAttribute();
-                    wuguAttribute.setSessionID(sessionID);
-                    wuguAttribute.setKey("userName");
-                    String userName = restTemplate.postForObject("http://localhost:8280/session/getAttribute", wuguAttribute, String.class);
+                    String userName = restTemplate.postForObject("http://localhost:8050/login/getLogin", sessionID, String.class);
                     if (userName != null) {
                         return orderDao.add(userName, phoneName);
                     }
@@ -78,5 +67,9 @@ public class OrderService {
             }
         }
         return false;
+    }
+
+    public boolean createOrder(String messageID) {
+        return orderDao.createOrder(messageID);
     }
 }

@@ -40,4 +40,9 @@ public class OrderController {
     public boolean add(HttpServletRequest request) {
         return orderService.add(request.getCookies(), request.getParameter("phoneName"));
     }
+
+    @RequestMapping(value = "/createOrder")
+    public boolean createOrder(HttpServletRequest request) {
+        return orderService.createOrder(request.getParameter("messageID"));
+    }
 }

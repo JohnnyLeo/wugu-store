@@ -38,12 +38,12 @@ public class CartController {
         }
     }
 
-    @RequestMapping(value = "delete")
+    @RequestMapping(value = "/delete")
     public boolean delete(HttpServletRequest request) {
         return cartService.delete(request.getParameter("messageID"));
     }
 
-    @RequestMapping(value = "select")
+    @RequestMapping(value = "/select")
     public void select(HttpServletRequest request, HttpServletResponse response) throws IOException {
         Cookie[] cookies = request.getCookies();
         response.setContentType("text/json");

@@ -7,36 +7,7 @@
 	<head>
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<title>Hydrogen &mdash; A free HTML5 Template by FREEHTML5.CO</title>
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<meta name="description" content="Free HTML5 Template by FREEHTML5.CO" />
-	<meta name="keywords" content="free html5, free template, free bootstrap, html5, css3, mobile first, responsive" />
-	<meta name="author" content="FREEHTML5.CO" />
-
-  <!-- 
-	//////////////////////////////////////////////////////
-
-	FREE HTML5 TEMPLATE 
-	DESIGNED & DEVELOPED by FREEHTML5.CO
-		
-	Website: 		http://freehtml5.co/
-	Email: 			info@freehtml5.co
-	Twitter: 		http://twitter.com/fh5co
-	Facebook: 		https://www.facebook.com/fh5co
-
-	//////////////////////////////////////////////////////
-	 -->
-
-  <!-- Facebook and Twitter integration -->
-	<meta property="og:title" content=""/>
-	<meta property="og:image" content=""/>
-	<meta property="og:url" content=""/>
-	<meta property="og:site_name" content=""/>
-	<meta property="og:description" content=""/>
-	<meta name="twitter:title" content="" />
-	<meta name="twitter:image" content="" />
-	<meta name="twitter:url" content="" />
-	<meta name="twitter:card" content="" />
+	<title>购物车</title>
 
 	<!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
 	<link rel="stylesheet" href="css/icomoon.css">
@@ -44,15 +15,11 @@
 		<!-- Bootstrap  -->
 		<link rel="stylesheet" href="css/bootstrap.css">
 		<link rel="stylesheet" type="text/css" href="css/main.css"/>
-	
-		<!-- Styleswitcher ( This style is for demo purposes only, you may delete this anytime. ) -->
 		<link rel="stylesheet" id="theme-switch" href="css/style.css">
-	<!-- Modernizr JS -->
+
 	<script src="js/modernizr-2.6.2.min.js"></script>
-	<!-- FOR IE9 below -->
-	<!--[if lt IE 9]>
+
 	<script src="js/respond.min.js"></script>
-	<![endif]-->
 
 	</head>
 	<body>
@@ -72,14 +39,14 @@
 				</div>
 				<div id="navbar" class="navbar-collapse collapse">
 					<ul class="nav navbar-nav navbar-right">
-						<li class="active"><a href="http://localhost/main/index.html" ><span>首页</span></a></li>
-						<li><a href="http://localhost/cart/index.html" target="_blank"><span>购物车</span></a></li>
-						<li><a href="http://localhost/order/order.html" target="_blank"><span>我的订单</span></a></li>
-						<li><a href="./order/pay.html" target="_blank"><span>已购买</span></a></li>
+						<li><a href="http://localhost/main/index.html" ><span>首页</span></a></li>
+						<li class="active"><a href="http://localhost/shoppingCart/index.html"><span>购物车</span></a></li>
+						<li><a href="http://localhost/order/order.html"><span>我的订单</span></a></li>
+						<li><a href="./order/pay.html"><span>已购买</span></a></li>
 					</ul>
-					<ul class="login-register">
-						<li><a href="http://localhost/loginRegister/login.html" target="_blank">登录</a> &#47; </li>
-						<li><a href="http://localhost/loginRegister/login.html" target="_blank">注册</a></li>
+					<ul class="login-register" id="userName">
+						<li><a href="http://localhost/loginRegister/login.html">登录</a> &#47; </li>
+						<li><a href="http://localhost/loginRegister/login.html">注册</a></li>
 					</ul>
 				</div>
 	
@@ -97,17 +64,8 @@
 					<div class="fh5co-spacer fh5co-spacer-sm"></div>
 					<div class="row">
 						<!-- 此处开始拼接 -->
-						<div class="col-md-4">
-							<div class="fh5co-pricing-table">
-								<h3>phoneName</h3>
-								<ul class="fh5co-list-check">
-									<li class="fh5co-include">price</li>
-									<li class="fh5co-include">number</li>
-									<li>orderID</li>
-								</ul>
-								<button class="btn btn-warning" id="clear">删除</button>
-								<button class="btn btn-success" id="buy">购买</button>
-							</div>
+						<div id="carts" style="display: inline">
+
 						</div>
 						<!-- end -->
 					</div>
@@ -139,24 +97,98 @@
 			</div>
 		</footer>
 
+	<script src="js/jquery-1.12.4.js"></script>
 
-	<!-- jQuery -->
-	<script src="js/jquery.min.js"></script>
-	<!-- jQuery Easing -->
-	<script src="js/jquery.easing.1.3.js"></script>
-	<!-- Bootstrap -->
-	<script src="js/bootstrap.min.js"></script>
-	<!-- Waypoints -->
-	<script src="js/jquery.waypoints.min.js"></script>
-	<!-- Magnific Popup -->
-	<script src="js/jquery.magnific-popup.min.js"></script>
-	<!-- Salvattore -->
-	<script src="js/salvattore.min.js"></script>
-	<!-- Main JS -->
-	<script src="js/main.js"></script>
+	<script src="js/ajaxUtil.js"></script>
+	<script type="text/javascript">
+		$(function(){
+			window.onload = function(){
+				ajax({
+					method: HTTP_METHOD.GET,
+					url: "http://localhost/loginRegister/login/getUserName",
+					async: true,
+					type: HTTP_RESPONSE_TYPE.TEXT,
+					callback: function(data) {
+						if (data !== "") {
+							document.getElementById("userName").innerHTML = data;
+						}
+					}
+				})
 
-	
+				var orders;
+				ajax({
+					method: HTTP_METHOD.GET,
+					url: "http://localhost/shoppingCart/cart/select",
+					async: true,
+					type: HTTP_RESPONSE_TYPE.JSON,
+					callback: function(data) {
+						orders = data;
+						if (orders.length == 0) {
+							$("#carts").empty();
+							var $str = $("<div class='col-md-4' ><div class='fh5co-pricing-table'><h3>");
 
-	
+							$str.append("您的购物车空空如也！</h3>");//拼接订单类的商品名
+							$str.append("</div></div>");
+
+							$str.appendTo("#carts");
+						} else {
+
+
+							$("#carts").empty();
+
+							for(var i = 0;i < orders.length;i++){
+								var $str = $("<div class='col-md-4' style='display: inline'><div class='fh5co-pricing-table'  style='display: inline'><span>");
+
+								$str.append("商品："+orders[i].phoneName+"</span><br/><span>");//拼接订单类的商品名
+								$str.append("价格："+orders[i].price+"</span><br/><span>"); //拼接订单类的商品价格
+								$str.append("数量："+orders[i].number+"</span><br/>");//拼接订单类的商品数量
+								$str.append("<button class='btn btn-warning' id='clear' onclick = 'del(\""+orders[i].messageID+"\")'>删除</button><button class='btn btn-success' id='buy' onclick = 'buy(\""+orders[i].messageID+"\")'>购买</button></div></div>");
+
+								$str.appendTo("#carts");
+							};
+						}
+					}
+				})
+			}
+		})
+
+		del = function(a) {
+			ajax({
+				method: HTTP_METHOD.POST,
+				url: "http://localhost/shoppingCart/cart/delete",
+				params: "messageID=" + a,
+				async: true,
+				type: HTTP_RESPONSE_TYPE.TEXT,
+				callback: function (data) {
+					if (data.toString() == "true") {
+						location.reload();
+					} else {
+						alert("删除失败,请待会儿再试！");
+					}
+				}
+			})
+		}
+
+		buy = function(a) {
+			ajax({
+				method: HTTP_METHOD.POST,
+				url: "http://localhost/order/order/createOrder",
+				params: "messageID=" + a,
+				async: true,
+				type: HTTP_RESPONSE_TYPE.TEXT,
+				callback: function (data) {
+					if (data.toString() == "true") {
+						location.replace("http://localhost/order/order.html");
+					} else {
+						alert("支付失败，请待会儿再试吧！");
+					}
+				}
+			})
+		}
+
+		document.getElementById("userName").onclick = function() {
+			location.replace("http://localhost/loginRegister/login.html");
+		}
+	</script>
 	</body>
 </html>

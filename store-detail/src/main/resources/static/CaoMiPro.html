@@ -31,13 +31,13 @@
 			<div id="navbar" class="navbar-collapse collapse">
 				<ul class="nav navbar-nav navbar-right">
 					<li class="active"><a href="http://localhost/main/index.html" ><span>首页</span></a></li>
-					<li><a href="http://localhost/cart/index.html" target="_blank"><span>购物车</span></a></li>
-					<li><a href="http://localhost/order/order.html" target="_blank"><span>我的订单</span></a></li>
-					<li><a href="./order/pay.html" target="_blank"><span>已购买</span></a></li>
+					<li><a href="http://localhost/shoppingCart/index.html"><span>购物车</span></a></li>
+					<li><a href="http://localhost/order/order.html"><span>我的订单</span></a></li>
+					<li><a href="./order/pay.html"><span>已购买</span></a></li>
 				</ul>
-				<ul class="login-register">
-					<li><a href="http://localhost/loginRegister/login.html" target="_blank">登录</a> &#47; </li>
-					<li><a href="http://localhost/loginRegister/login.html" target="_blank">注册</a></li>
+				<ul class="login-register" id="userName">
+					<li><a href="http://localhost/loginRegister/login.html">登录</a> &#47; </li>
+					<li><a href="http://localhost/loginRegister/login.html">注册</a></li>
 				</ul>
 			</div>
 
@@ -133,6 +133,24 @@
 					}
 				}
 			})
+		}
+
+		window.onload = function() {
+			ajax({
+				method: HTTP_METHOD.GET,
+				url: "http://localhost/loginRegister/login/getUserName",
+				async: true,
+				type: HTTP_RESPONSE_TYPE.TEXT,
+				callback: function(data) {
+					if (data !== "") {
+						document.getElementById("userName").innerHTML = data;
+					}
+				}
+			})
+		}
+
+		document.getElementById("userName").onclick = function() {
+			location.replace("http://localhost/loginRegister/login.html");
 		}
 	</script>
 
