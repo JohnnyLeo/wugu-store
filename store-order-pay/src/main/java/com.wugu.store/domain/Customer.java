@@ -1,4 +1,4 @@
-package homework_entity;
+package com.wugu.store.domain;
 
 public class Customer {
 	private String name;

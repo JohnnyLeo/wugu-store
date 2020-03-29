@@ -1,10 +1,10 @@
 spring:
   application:
     name: store-session
-  redis:
-    database: 0
-    host: 127.0.0.1
-    port: 6379
+#  redis:
+#    database: 0
+#    host: 127.0.0.1
+#    port: 6379
 
 server:
   port: 8280
