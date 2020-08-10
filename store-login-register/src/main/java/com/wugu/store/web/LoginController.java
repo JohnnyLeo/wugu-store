@@ -21,6 +21,12 @@ public class LoginController {
 
     private RestTemplate restTemplate;
     private LoginService loginService;
+    private SessionService sessionService;
+
+    @Autowired
+    public void setSessionService(SessionService sessionService) {
+        this.sessionService = sessionService;
+    }
 
     @Autowired
     public void setLoginService(LoginService loginService) {
@@ -37,7 +43,7 @@ public class LoginController {
         WuguAttribute wuguAttribute = new WuguAttribute();
         wuguAttribute.setSessionID(sessionID);
         wuguAttribute.setKey("userName");
-        String userName = restTemplate.postForObject("http://localhost:8280/session/getAttribute", wuguAttribute, String.class);
+        String userName = sessionService.getLogin(wuguAttribute);//restTemplate.postForObject("http://store-session/session/getAttribute", wuguAttribute, String.class);
         if (userName != null) {
             return userName;
         }
@@ -69,7 +75,8 @@ public class LoginController {
             WuguSession wuguSession = new WuguSession();
             wuguSession.setSessionID(sessionID);
             wuguSession.setUserName(userName);
-            restTemplate.postForEntity("http://localhost:8280/session/createSession", wuguSession, Boolean.class);
+            //restTemplate.postForEntity("http://store-session/session/createSession", wuguSession, Boolean.class);
+            sessionService.doLogin(wuguSession);
             Cookie cookie = new Cookie("sessionID", sessionID);
             cookie.setMaxAge(60 * 60);
             cookie.setDomain("localhost");
@@ -83,6 +90,6 @@ public class LoginController {
 
     @RequestMapping(value = "/loginOut")
     public boolean loginOut(@RequestBody String sessionID) {
-        return restTemplate.postForObject("http://localhost:8280/session/removeSession", sessionID, Boolean.class);
+        return sessionService.loginOut(sessionID);//restTemplate.postForObject("http://store-session/session/removeSession", sessionID, Boolean.class);
     }
 }

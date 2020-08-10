@@ -1,16 +1,37 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="1986aff7-b218-45ed-8c4f-908a07bff74f" name="Default Changelist" comment="add sentinel for redis.">
-      <change afterPath="$PROJECT_DIR$/store-session/src/main/java/com/wugu/store/domain/SentinelPool.java" afterDir="false" />
+    <list default="true" id="1986aff7-b218-45ed-8c4f-908a07bff74f" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/jarRepositories.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/store-login-register/src/main/java/com/wugu/store/web/SessionService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/store-session/src/test/java/com/wugu/store/web/RedisControllerTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/store-order-pay/src/main/java/com.wugu.store/domain/Customer.java" beforeDir="false" afterPath="$PROJECT_DIR$/store-order-pay/src/main/java/com.wugu.store/domain/Customer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/store-order-pay/src/main/java/com.wugu.store/domain/Order.java" beforeDir="false" afterPath="$PROJECT_DIR$/store-order-pay/src/main/java/com.wugu.store/domain/Order.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/store-detail/store-detail.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/store-eureka/store-eureka.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/store-login-register/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/store-login-register/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/store-login-register/src/main/java/com/wugu/store/LoginRegisterApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/store-login-register/src/main/java/com/wugu/store/LoginRegisterApplication.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/store-login-register/src/main/java/com/wugu/store/web/LoginController.java" beforeDir="false" afterPath="$PROJECT_DIR$/store-login-register/src/main/java/com/wugu/store/web/LoginController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/store-login-register/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/store-login-register/src/main/resources/application.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/store-login-register/target/classes/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/store-login-register/target/classes/application.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/store-login-register/target/classes/com/wugu/store/LoginRegisterApplication.class" beforeDir="false" afterPath="$PROJECT_DIR$/store-login-register/target/classes/com/wugu/store/LoginRegisterApplication.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/store-login-register/target/classes/com/wugu/store/web/LoginController.class" beforeDir="false" afterPath="$PROJECT_DIR$/store-login-register/target/classes/com/wugu/store/web/LoginController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/store-main/store-main.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/store-order-pay/src/main/java/com.wugu.store/OrderPayApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/store-order-pay/src/main/java/com.wugu.store/OrderPayApplication.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/store-order-pay/store-order-pay.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/store-session/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/store-session/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/store-session/src/main/java/com/wugu/store/SessionApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/store-session/src/main/java/com/wugu/store/SessionApplication.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/store-session/src/main/java/com/wugu/store/web/RedisController.java" beforeDir="false" afterPath="$PROJECT_DIR$/store-session/src/main/java/com/wugu/store/web/RedisController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/store-session/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/store-session/src/main/resources/application.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/store-session/store-session.iml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/store-session/target/classes/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/store-session/target/classes/application.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/store-shoppingCart/src/main/java/com.wugu.store/ShoppingCartApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/store-shoppingCart/src/main/java/com.wugu.store/ShoppingCartApplication.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/store-shoppingCart/src/main/java/com.wugu.store/service/CartService.java" beforeDir="false" afterPath="$PROJECT_DIR$/store-shoppingCart/src/main/java/com.wugu.store/service/CartService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/store-shoppingCart/store-shoppingCart.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/store-zuul/store-zuul.iml" beforeDir="false" />
     </list>
-    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -19,57 +40,6 @@
   <component name="CodeStyleSettingsInfer">
     <option name="done" value="true" />
   </component>
-  <component name="DatabaseView">
-    <option name="SHOW_INTERMEDIATE" value="true" />
-    <option name="GROUP_DATA_SOURCES" value="true" />
-    <option name="GROUP_SCHEMA" value="true" />
-    <option name="GROUP_CONTENTS" value="false" />
-    <option name="SORT_POSITIONED" value="false" />
-    <option name="SHOW_EMPTY_GROUPS" value="false" />
-    <option name="AUTO_SCROLL_FROM_SOURCE" value="false" />
-    <option name="HIDDEN_KINDS">
-      <set />
-    </option>
-    <expand>
-      <path>
-        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
-        <item name="wugustore@localhost" type="feb32156:DbDataSourceImpl" />
-      </path>
-      <path>
-        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
-        <item name="wugustore@localhost" type="feb32156:DbDataSourceImpl" />
-        <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
-      </path>
-      <path>
-        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
-        <item name="wugustore@localhost" type="feb32156:DbDataSourceImpl" />
-        <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
-        <item name="wugustore: schema" type="76f4a085:MysqlImplModel$Schema" />
-      </path>
-      <path>
-        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
-        <item name="wugustore@localhost" type="feb32156:DbDataSourceImpl" />
-        <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
-        <item name="wugustore: schema" type="76f4a085:MysqlImplModel$Schema" />
-        <item name="message: table" type="285a2a93:MysqlImplModel$Table" />
-      </path>
-      <path>
-        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
-        <item name="wugustore@localhost" type="feb32156:DbDataSourceImpl" />
-        <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
-        <item name="wugustore: schema" type="76f4a085:MysqlImplModel$Schema" />
-        <item name="phone: table" type="285a2a93:MysqlImplModel$Table" />
-      </path>
-      <path>
-        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
-        <item name="wugustore@localhost" type="feb32156:DbDataSourceImpl" />
-        <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
-        <item name="wugustore: schema" type="76f4a085:MysqlImplModel$Schema" />
-        <item name="user: table" type="285a2a93:MysqlImplModel$Table" />
-      </path>
-    </expand>
-    <select />
-  </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
@@ -77,6 +47,10 @@
         <option value="FxmlFile" />
         <option value="spring-beans.schema" />
         <option value="Class" />
+        <option value="Arquillian JUnit Test Class" />
+        <option value="JUnit5 Test Class" />
+        <option value="JUnit4 Test Class" />
+        <option value="Interface" />
       </list>
     </option>
   </component>
@@ -98,7 +72,7 @@
   <component name="MavenImportPreferences">
     <option name="generalSettings">
       <MavenGeneralSettings>
-        <option name="mavenHome" value="D:/masterSpring/apache-maven-3.6.0" />
+        <option name="mavenHome" value="$PROJECT_DIR$/../../../masterSpring/apache-maven-3.6.0" />
       </MavenGeneralSettings>
     </option>
   </component>
@@ -108,6 +82,10 @@
   <component name="ProjectId" id="1TbtmcQjDW13jHsLTbax2uBA7H1" />
   <component name="ProjectLevelVcsManager">
     <ConfirmationsSetting value="2" id="Add" />
+  </component>
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
     <property name="DatabaseDriversLRU" value="mysql" />
@@ -122,21 +100,37 @@
     <property name="TODO_SCOPE" value="All Places" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
+    <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary" value="JUnit4" />
+    <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.Arquillian JUnit4" value="" />
+    <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit4" value="" />
+    <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5" value="" />
     <property name="last_directory_selection" value="$PROJECT_DIR$/store-order-pay/src/main/java" />
-    <property name="last_opened_file_path" value="$USER_HOME$/Desktop/forum" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../supermarket" />
+    <property name="node.js.detected.package.eslint" value="true" />
+    <property name="node.js.detected.package.tslint" value="true" />
+    <property name="node.js.path.for.package.eslint" value="project" />
+    <property name="node.js.path.for.package.tslint" value="project" />
+    <property name="node.js.selected.package.eslint" value="(autodetect)" />
+    <property name="node.js.selected.package.tslint" value="(autodetect)" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.28045976" />
     <property name="restartRequiresConfirmation" value="false" />
-    <property name="settings.editor.selected.configurable" value="preferences.general" />
+    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
     <property name="show.run.dashboard.notification" value="false" />
   </component>
   <component name="RecentsManager">
+    <key name="CreateTestDialog.RecentsKey">
+      <recent name="com.wugu.store.web" />
+    </key>
     <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
       <recent name="com.wugu.store" />
       <recent name="com.wugu.store.web" />
+    </key>
+    <key name="CreateTestDialog.Recents.Supers">
+      <recent name="" />
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
       <recent name="com.wugu.store.dao" />
@@ -150,19 +144,24 @@
       <recent name="D:\IDEA\java web\wugustore\store-detail\src\main\resources\static\images" />
     </key>
   </component>
-  <component name="RunDashboard">
-    <option name="ruleStates">
-      <list>
-        <RuleState>
-          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
-        </RuleState>
-        <RuleState>
-          <option name="name" value="StatusDashboardGroupingRule" />
-        </RuleState>
-      </list>
-    </option>
-  </component>
-  <component name="RunManager" selected="Spring Boot.Session">
+  <component name="RunManager" selected="Spring Boot.Main">
+    <configuration name="RedisControllerTest.test1" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="store-session" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.wugu.store.web.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.wugu.store.web" />
+      <option name="MAIN_CLASS_NAME" value="com.wugu.store.web.RedisControllerTest" />
+      <option name="METHOD_NAME" value="test1" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+        <option name="BSP.BeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="Detail" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
       <module name="store-detail" />
       <option name="SPRING_BOOT_MAIN_CLASS" value="com.wugu.store.DetailApplication" />
@@ -291,6 +290,7 @@
       </method>
     </configuration>
     <list>
+      <item itemvalue="JUnit.RedisControllerTest.test1" />
       <item itemvalue="Spring Boot.Order-Pay" />
       <item itemvalue="Spring Boot.Detail" />
       <item itemvalue="Spring Boot.Session" />
@@ -300,26 +300,14 @@
       <item itemvalue="Spring Boot.Main" />
       <item itemvalue="Spring Boot.Eureka" />
     </list>
+    <recent_temporary>
+      <list>
+        <item itemvalue="JUnit.RedisControllerTest.test1" />
+      </list>
+    </recent_temporary>
   </component>
-  <component name="ServiceViewManager">
-    <option name="allServicesViewState">
-      <serviceView>
-        <treeState>
-          <expand>
-            <path>
-              <item name="services root" type="e789fda9:ObjectUtils$Sentinel" />
-              <item name="com.intellij.execution.services.ServiceModel$ServiceGroupNode@c82a810e" type="7427dc5b:ServiceModel$ServiceGroupNode" />
-            </path>
-            <path>
-              <item name="services root" type="e789fda9:ObjectUtils$Sentinel" />
-              <item name="com.intellij.execution.services.ServiceModel$ServiceGroupNode@c82a810e" type="7427dc5b:ServiceModel$ServiceGroupNode" />
-              <item name="com.intellij.execution.services.ServiceModel$ServiceNode@3c7c16f" type="9fbbdea:ServiceModel$ServiceNode" />
-            </path>
-          </expand>
-          <select />
-        </treeState>
-      </serviceView>
-    </option>
+  <component name="SshConsoleOptionsProvider">
+    <option name="myEncoding" value="UTF-8" />
   </component>
   <component name="SvnConfiguration">
     <configuration />
@@ -378,7 +366,22 @@
       <workItem from="1576763769095" duration="301000" />
       <workItem from="1577364125893" duration="840000" />
       <workItem from="1585318349336" duration="7845000" />
-      <workItem from="1585486559619" duration="246000" />
+      <workItem from="1585486559619" duration="387000" />
+      <workItem from="1587274924841" duration="3447000" />
+      <workItem from="1587638423895" duration="3318000" />
+      <workItem from="1587646409281" duration="764000" />
+      <workItem from="1587984047660" duration="1817000" />
+      <workItem from="1588042824617" duration="1904000" />
+      <workItem from="1588050842031" duration="2418000" />
+      <workItem from="1588162755882" duration="711000" />
+      <workItem from="1588243442635" duration="1327000" />
+      <workItem from="1588474104183" duration="1534000" />
+      <workItem from="1588488947211" duration="756000" />
+      <workItem from="1588731868424" duration="1445000" />
+      <workItem from="1588827010016" duration="573000" />
+      <workItem from="1589874601335" duration="4167000" />
+      <workItem from="1591760665488" duration="321000" />
+      <workItem from="1597034550564" duration="7816000" />
     </task>
     <task id="LOCAL-00001" summary="add session;login-register">
       <created>1574670885658</created>
@@ -534,24 +537,30 @@
       <option name="project" value="LOCAL" />
       <updated>1576147412868</updated>
     </task>
-    <option name="localTasksCounter" value="23" />
+    <task id="LOCAL-00023" summary="add sentinel for redis.">
+      <created>1585486825758</created>
+      <option name="number" value="00023" />
+      <option name="presentableId" value="LOCAL-00023" />
+      <option name="project" value="LOCAL" />
+      <updated>1585486825758</updated>
+    </task>
+    <option name="localTasksCounter" value="24" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
-    <option name="version" value="1" />
+    <option name="version" value="2" />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
     <option name="TAB_STATES">
       <map>
         <entry key="MAIN">
           <value>
-            <State>
-              <option name="COLUMN_ORDER" />
-            </State>
+            <State />
           </value>
         </entry>
       </map>
     </option>
+    <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="add session;login-register" />
@@ -577,5 +586,52 @@
     <MESSAGE value="fix bug of cart" />
     <MESSAGE value="add sentinel for redis." />
     <option name="LAST_COMMIT_MESSAGE" value="add sentinel for redis." />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="488" y="64" key="#com.intellij.ide.util.MemberChooser" timestamp="1597037753493">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="488" y="64" key="#com.intellij.ide.util.MemberChooser/0.0.1366.728/-1920.-510.1920.1040@0.0.1366.728" timestamp="1597037753493" />
+    <state x="463" y="118" key="FileChooserDialogImpl" timestamp="1597035203176">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="463" y="118" key="FileChooserDialogImpl/0.0.1366.728/-1920.-510.1920.1040@0.0.1366.728" timestamp="1597035203176" />
+    <state x="463" y="118" key="FileChooserDialogImpl/0.0.1366.728@0.0.1366.728" timestamp="1588489102362" />
+    <state width="1323" height="210" key="GridCell.Tab.0.bottom" timestamp="1597040923205">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state width="1323" height="210" key="GridCell.Tab.0.bottom/0.0.1366.728/-1920.-510.1920.1040@0.0.1366.728" timestamp="1597040923205" />
+    <state width="1323" height="210" key="GridCell.Tab.0.center" timestamp="1597040923205">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state width="1323" height="210" key="GridCell.Tab.0.center/0.0.1366.728/-1920.-510.1920.1040@0.0.1366.728" timestamp="1597040923205" />
+    <state width="1323" height="210" key="GridCell.Tab.0.left" timestamp="1597040923205">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state width="1323" height="210" key="GridCell.Tab.0.left/0.0.1366.728/-1920.-510.1920.1040@0.0.1366.728" timestamp="1597040923205" />
+    <state width="1323" height="210" key="GridCell.Tab.0.right" timestamp="1597040923205">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state width="1323" height="210" key="GridCell.Tab.0.right/0.0.1366.728/-1920.-510.1920.1040@0.0.1366.728" timestamp="1597040923205" />
+    <state width="1323" height="210" key="GridCell.Tab.1.bottom" timestamp="1597040923205">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state width="1323" height="210" key="GridCell.Tab.1.bottom/0.0.1366.728/-1920.-510.1920.1040@0.0.1366.728" timestamp="1597040923205" />
+    <state width="1323" height="210" key="GridCell.Tab.1.center" timestamp="1597040923205">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state width="1323" height="210" key="GridCell.Tab.1.center/0.0.1366.728/-1920.-510.1920.1040@0.0.1366.728" timestamp="1597040923205" />
+    <state width="1323" height="210" key="GridCell.Tab.1.left" timestamp="1597040923205">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state width="1323" height="210" key="GridCell.Tab.1.left/0.0.1366.728/-1920.-510.1920.1040@0.0.1366.728" timestamp="1597040923205" />
+    <state width="1323" height="210" key="GridCell.Tab.1.right" timestamp="1597040923205">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state width="1323" height="210" key="GridCell.Tab.1.right/0.0.1366.728/-1920.-510.1920.1040@0.0.1366.728" timestamp="1597040923205" />
+    <state x="57" y="24" key="new project wizard" timestamp="1589903040922">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="57" y="24" key="new project wizard/0.0.1366.728/1366.-549.1920.1040@0.0.1366.728" timestamp="1589903040922" />
   </component>
 </project>

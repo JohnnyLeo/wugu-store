@@ -35,7 +35,7 @@ public class CartService {
                     WuguAttribute wuguAttribute = new WuguAttribute();
                     wuguAttribute.setSessionID(sessionID);
                     wuguAttribute.setKey("userName");
-                    String userName = restTemplate.postForObject("http://localhost:8280/session/getAttribute", wuguAttribute, String.class);
+                    String userName = restTemplate.postForObject("http://STORE-SESSION/session/getAttribute", wuguAttribute, String.class);
                     if (userName != null) {
                         return cartDao.add(userName, phoneName);
                     }
@@ -57,7 +57,7 @@ public class CartService {
                     WuguAttribute wuguAttribute = new WuguAttribute();
                     wuguAttribute.setSessionID(sessionID);
                     wuguAttribute.setKey("userName");
-                    String userName = restTemplate.postForObject("http://localhost:8280/session/getAttribute", wuguAttribute, String.class);
+                    String userName = restTemplate.postForObject("http://STORE-SESSION/session/getAttribute", wuguAttribute, String.class);
                     if (userName != null) {
                         List<Message> list = cartDao.select(userName);
                         if (list != null) {
